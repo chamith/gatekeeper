@@ -33,6 +33,16 @@ namespace Gatekeeper.ConsoleApp
 			
 			return exit;
 		}
+		
+		static void Initialize()
+		{
+			string username = "admin";
+			string firstname = "Admin";
+			string lastname = "User";
+			string password = "1qaz2wsx@";
+			var user = new Gatekeeper.AuthenticationSvc().AddUser(username, password, firstname, lastname);
+
+		}
 	}
 }
 
