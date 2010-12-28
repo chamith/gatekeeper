@@ -1,0 +1,25 @@
+﻿<h2>New Application</h2>
+<br/>
+$Form.FormTag("%{action='SaveAdd'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("application.Name", "Name:")</td>
+            <td style="width: 100px">
+                $Form.TextField("application.Name", "%{}")</td>
+        </tr>
+        <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("application.Description", "Description:")</td>
+            <td style="width: 100px">
+                $Form.TextField("application.Description", "%{}")</td>
+        </tr>
+       <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.Submit("Save")
+</td>
+        </tr>
+    </table>
+   $Form.EndFormTag()

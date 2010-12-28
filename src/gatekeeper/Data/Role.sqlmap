@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.Role"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="Role" type="Gatekeeper.Role, gatekeeper"/>
+  </alias>
+
+  <statements>
+    <procedure id="role-select" parameterMap="roleId" resultMap="role">
+      csp_Role_Select
+    </procedure>
+    <procedure id="role-insert" parameterMap="role-insert" resultMap="role">
+      csp_Role_Insert
+    </procedure>
+    <procedure id="role-update" parameterMap="role-update">
+      csp_Role_Update
+    </procedure>
+    <procedure id="role-delete" parameterMap="roleId">
+      csp_Role_Delete
+    </procedure>
+    <procedure id="role-select-by-applicationId" parameterMap="applicationId" resultMap="role">
+      bsp_Role_Select_by_ApplicationId
+    </procedure>
+  </statements>
+
+  <resultMaps>
+    <resultMap id="role" class="Role">
+      <result column="Id" property="Id"/>
+      <result column="Name" property="Name"/>
+      <result column="Description" property="Description"/>
+      <result column="ApplicationId" property="Application.Id"/>
+      <result column="SecurableObjectTypeId" property="SecurableObjectType.Id"/>
+    </resultMap>
+  </resultMaps>
+  
+  <parameterMaps>
+
+    <parameterMap id="applicationId">
+      <parameter column="@_applicationId" property="#value#"/>
+     </parameterMap>
+    <parameterMap id="roleId">
+      <parameter column="@_id" property="#value#"/>
+    </parameterMap>
+    <parameterMap id="role">
+      <parameter column="@_name" property="Name"/>
+      <parameter column="@_description" property="Description"/>
+      <parameter column="@_applicationId" property="Application.Id"/>
+      <parameter column="@_securableObjectTypeId" property="SecurableObjectType.Id"/>
+    </parameterMap>
+    <parameterMap id="role-insert" extends="role">
+    </parameterMap>
+    <parameterMap id="role-update" extends="role">
+      <parameter column="@_id" property="Id"/>
+    </parameterMap>
+  </parameterMaps>
+  
+</sqlMap>

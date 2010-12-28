@@ -1,0 +1,5 @@
+﻿<h2>Delete Application</h2>
+<br />
+Are you sure that you want to delete the application <b>$application.Name</b>?<br />
+$Url.Link("Yes","%{controller='application', action='delete', querystring='applicationId=$application.Id'}") |
+$Url.Link("No","%{controller='application', action='display', querystring='applicationId=$application.Id'}")

@@ -1,0 +1,21 @@
+﻿<table style="width:100%">
+<tr>
+<!--<th align="left">Name</th>
+<th align="left">Options</th>
+--></tr>
+#foreach($userStory in $userStories)
+<tr>
+  <td>
+   $Form.CheckboxField("$userStory.Id")
+  </td>
+<td align="left">
+  $Url.Link("$userStory.Name","%{controller='userStory', action='display', querystring='id=$userStory.Id'}")
+</td>
+	<td>$userStory.Release.Name</td>
+	<td>$userStory.Iteration.Name</td>
+	<td align="left">
+    [$Url.Link("Edit","%{controller='userStory', action='edit', querystring='id=$userStory.Id'}") |
+    $Url.Link("Delete","%{controller='userStory', action='confirmDelete', querystring='id=$userStory.Id'}")]</td>
+	</tr>
+#end
+</table>

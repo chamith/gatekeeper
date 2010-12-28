@@ -1,0 +1,25 @@
+﻿<h2>Roles of $application.Name</h2>
+<br />
+<table style="width:100%">
+  <tr align="left">
+  <th>Name</th>
+  <th>Scope</th>
+  <th>Manage</th>
+  </tr>
+#foreach($role in $roles)
+<tr>
+<td>
+$Url.Link($role.Name, "%{controller='role', action='display', querystring='roleId=$role.Id'}")
+</td>
+  <td>
+    $role.SecurableObjectType.Name
+  </td>
+  <td>
+$Url.Link("Edit", "%{controller='role', action='edit', querystring='roleId=$role.Id'}") |
+$Url.Link("Delete", "%{controller='role', action='confirmDelete', querystring='roleId=$role.Id'}")
+</td>
+</tr>
+#end
+</table>
+<br />
+$Url.Link("Add New Role", "%{controller='role', action='add', querystring='applicationId=$application.Id'}")

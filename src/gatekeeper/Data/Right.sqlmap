@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.Right" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="Right" type="Gatekeeper.Right, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="right-select" parameterMap="rightId" resultMap="right">
+      csp_Right_Select
+    </procedure>
+		<procedure id="right-insert" parameterMap="right-insert" resultMap="right">
+      csp_Right_Insert
+    </procedure>
+		<procedure id="right-update" parameterMap="right-update">
+      csp_Right_Update
+    </procedure>
+		<procedure id="right-delete" parameterMap="rightId">
+      csp_Right_Delete
+    </procedure>
+		<procedure id="right-select-by-applicationId" parameterMap="applicationId" resultMap="right">
+      bsp_Right_Select_by_ApplicationId
+    </procedure>
+		<procedure id="right-select-by-securableObjectTypeId" parameterMap="securableObjectTypeId" resultMap="right">
+      bsp_Right_Select_by_SecurableObjectTypeId
+    </procedure>
+	</statements>
+	<resultMaps>
+		<resultMap id="right" class="Right">
+			<result column="Id" property="Id" />
+			<result column="Name" property="Name" />
+			<result column="Description" property="Description" />
+			<result column="ApplicationId" property="Application.Id" />
+			<result column="SecurableObjectTypeId" property="SecurableObjectType.Id" />
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="applicationId">
+			<parameter column="@_applicationId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="securableObjectTypeId">
+			<parameter column="@_securableObjectTypeId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="rightId">
+			<parameter column="@_id" property="#value#" />
+		</parameterMap>
+		<parameterMap id="right">
+			<parameter column="@_name" property="Name" />
+			<parameter column="@_description" property="Description" />
+			<parameter column="@_applicationId" property="Application.Id" />
+			<parameter column="@_securableObjectTypeId" property="SecurableObjectType.Id" />
+		</parameterMap>
+		<parameterMap id="right-insert" extends="right">
+		</parameterMap>
+		<parameterMap id="right-update" extends="right">
+			<parameter column="@_id" property="Id" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

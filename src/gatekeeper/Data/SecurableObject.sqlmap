@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.SecurableObject" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="SecurableObject" type="Gatekeeper.SecurableObject, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="securableObject-insert" parameterMap="securableObject-insert" resultMap="securableObject">
+    		csp_SecurableObject_Insert
+    	</procedure>
+		<procedure id="securableObject-select-by-guid" resultMap="securableObject" parameterMap="guid">
+     		bsp_SecurableObject_Select_by_Guid
+   		</procedure>
+	</statements>
+	<resultMaps>
+		<resultMap id="securableObject" class="SecurableObject">
+			<result column="Id" property="Id" />
+			<result column="Guid" property="Guid" />
+			<result column="SecurableObjectTypeId" property="SecurableObjectType.Id" />
+			<result column="ApplicationId" property="Application.Id" />
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="securableObject" class="SecurableObject">
+			<parameter column="@_guid" property="Guid" />
+			<parameter column="@_securableObjectTypeId" property="SecurableObjectType.Id" />
+			<parameter column="@_applicationId" property="Application.Id" />
+		</parameterMap>
+		<parameterMap id="securableObject-insert" extends="securableObject">
+		</parameterMap>
+		<parameterMap id="guid">
+			<parameter column="@_guid" property="#value#" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

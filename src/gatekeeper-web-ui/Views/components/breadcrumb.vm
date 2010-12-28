@@ -1,0 +1,7 @@
+#foreach($item in $breadcrumbTrail)
+	#if ($item.Value.Action)
+		$Url.Link($item.Value.Text, "%{controller='$item.Value.Controller', action='$item.Value.Action', querystring='$item.Value.QueryString'}") >
+	#else 
+		<li>$item.Value.Text</li>
+	#end
+#end

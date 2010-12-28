@@ -1,0 +1,16 @@
+﻿<h2>Securable Object Types of $application.Name</h2>
+<br />
+<table style="width:100%">
+#foreach($securableObjectType in $securableObjectTypes)
+<tr>
+<td>
+    $Url.Link($securableObjectType.Name, "%{controller='securableObjectType', action='display', querystring='securableObjectTypeId=${securableObjectType.Id}'}") </td>
+<td>
+    $Url.Link("Edit", "%{controller='securableObjectType', action='edit', querystring='securableObjectTypeId=${securableObjectType.Id}'}") | 
+    $Url.Link("Delete", "%{controller='securableObjectType', action='confirmDelete', querystring='securableObjectTypeId=${securableObjectType.Id}'}")
+</td>
+</tr>
+#end
+</table>
+<br /><br /><hr /><br />
+$Url.Link("Add New Securable Object Type", "%{controller='securableObjectType', action='add', querystring='applicationId=$application.Id'}")

@@ -1,0 +1,18 @@
+<h2>Users of $application.Name</h2>
+<br />
+<table style="width:100%">
+#foreach($applicationUser in $applicationUsers)
+<tr>
+<td>
+    $Url.Link($applicationUser.User.FullName, "%{controller='applicationUser', action='display', querystring='applicationUserId=${applicationUser.Id}'}") </td>
+<td>
+    $applicationUser.Role.Name</td>
+<td>
+    $Url.Link("Edit", "%{controller='applicationUser', action='edit', querystring='applicationUserId=${applicationUser.Id}'}") | 
+    $Url.Link("Delete", "%{controller='applicationUser', action='confirmDelete', querystring='applicationUserId=${applicationUser.Id}'}")
+</td>
+</tr>
+#end
+</table>
+<br /><br /><hr /><br />
+$Url.Link("Add New Application User", "%{controller='applicationUser', action='add', querystring='applicationId=$application.Id'}")

@@ -1,0 +1,25 @@
+﻿<h2>Rights of $application.Name</h2>
+<br />
+<table style="width:100%">
+  <tr align="left">
+  <th>Name</th>
+  <th>Scope</th>
+  <th>Manage</th>
+  </tr>
+#foreach($right in $rights)
+<tr>
+<td>
+$right.Name
+</td>
+  <td>
+    $right.SecurableObjectType.Name
+  </td>
+  <td>
+$Url.Link("Edit", "%{controller='right', action='edit', querystring='rightId=$right.Id'}") |
+$Url.Link("Delete", "%{controller='right', action='confirmDelete', querystring='rightId=$right.Id'}")
+</td>
+</tr>
+#end
+</table>
+<br />
+$Url.Link("Add New Right", "%{controller='right', action='add', querystring='applicationId=$application.Id'}")

@@ -1,0 +1,5 @@
+            #foreach($right in $rights)
+
+                        <input class="checkbox" type="checkbox" name="right.IsGranted" value="$right.Id" #if($right.IsGranted) checked #end/>
+                        $right.Name <br />
+            #end

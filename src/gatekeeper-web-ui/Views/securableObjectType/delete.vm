@@ -1,0 +1,5 @@
+﻿<h2>Delete Securable Object Type</h2>
+<br />
+Are you sure that you want to delete the securable object type <b>$securableObjectType.Name</b>?<br />
+$Url.Link("Yes","%{controller='securableObjectType', action='delete', querystring='applicationId=${securableObjectType.Application.Id}&securableObjectTypeId=${securableObjectType.Id}'}") |
+$Url.Link("No","%{controller='securableObjectType', action='default', querystring='applicationId=$securableObjectType.Application.Id'}")

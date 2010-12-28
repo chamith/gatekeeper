@@ -1,0 +1,8 @@
+﻿<h2>$role.Name</h2>
+$role.Description
+<br /><br /><hr /><br />
+$Url.Link("Edit", "%{controller='role', action='edit', querystring='roleId=$role.Id'}") | 
+$Url.Link("Rights", "%{controller='roleRightAssociation', action='displayRightsByRole', querystring='roleId=$role.Id'}")
+#if($role.SecurableObjectType.Id == 0)
+| $Url.Link("Users", "%{controller='systemRoleAssociation', action='displayUsersBySystemRole', querystring='roleId=$role.Id'}")
+#end

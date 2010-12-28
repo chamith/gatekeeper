@@ -1,0 +1,49 @@
+﻿$Form.FormTag("%{action='Register'}")
+<table>
+  <tr>
+    <td style="width: 150px">
+      $Form.LabelFor("regInfo.Email", "Email:")
+    </td>
+    <td style="width: 100px">
+      $Form.TextField("regInfo.Email", "%{}")
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 150px">
+      $Form.LabelFor("regInfo.Password", "Password:")
+    </td>
+    <td style="width: 100px">
+      $Form.TextField("regInfo.Password", "%{}")
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 150px">
+      $Form.LabelFor("regInfo.FirstName", "First Name:")
+    </td>
+    <td style="width: 100px">
+      $Form.TextField("regInfo.FirstName", "%{}")
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 150px">
+      $Form.LabelFor("regInfo.LastName", "Last Name:")
+    </td>
+    <td style="width: 100px">
+      $Form.TextField("regInfo.LastName", "%{}")
+    </td>
+  </tr>
+   <tr>
+            <td colspan="2">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                        </td>
+                        <td align="right">
+                            <input name="login" type="submit" value="submit" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+   </table>
+$Form.EndFormTag()

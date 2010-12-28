@@ -1,0 +1,34 @@
+﻿<h2>New Right</h2>
+<br />
+$Form.FormTag("%{action='SaveAdd'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("right.Name", "Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("right.Name", "%{}")</td>
+        </tr>
+         <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("right.Description", "Description:")</td>
+            <td style="width: 100px">
+              $Form.TextField("right.Description", "%{}")</td>
+        </tr>
+      <tr>
+        <td style="width: 150px">
+          $Form.LabelFor("right.SecurableObjectType.Id", "Securable Object Type:")
+        </td>
+        <td style="width: 100px">
+          $Form.Select("right.SecurableObjectType.Id",$securableObjectTypes, "%{text='Name', value='Id', firstoption='-----'}")
+        </td>
+      </tr>
+      <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.Submit("Save")
+</td>
+        </tr>
+    </table>
+$Form.HiddenField("right.Application.Id")
+$Form.EndFormTag()

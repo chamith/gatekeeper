@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.RoleRightAssignment" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="RoleRightAssignment" type="Gatekeeper.RoleRightAssignment, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="roleRightAssignment-select-by-applicationId" parameterMap="applicationId" resultMap="roleRightAssignment">
+      bsp_RoleRightAssignment_Select_by_ApplicationId
+    </procedure>
+		<procedure id="roleRightAssignment-select-by-roleId" parameterMap="roleId" resultMap="roleRightAssignment">
+      bsp_RoleRightAssignment_Select_by_RoleId
+    </procedure>
+		<procedure id="roleRightAssignment-insert" parameterMap="roleRightAssignment-insert" resultMap="roleRightAssignment">
+      csp_RoleRightAssignment_Insert
+    </procedure>
+		<procedure id="roleRightAssignment-delete" parameterMap="roleRightAssignmentId">
+      csp_RoleRightAssignment_Delete
+    </procedure>
+	</statements>
+	<resultMaps>
+		<resultMap id="roleRightAssignment" class="RoleRightAssignment">
+			<result column="Id" property="Id" />
+			<result column="RoleId" property="Role.Id" />
+			<result column="RightId" property="Right.Id" />
+			<result column="ApplicationId" property="Application.Id" />
+			<result column="SecurableObjectTypeId" property="SecurableObjectType.Id" />
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="applicationId">
+			<parameter column="@_applicationId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="roleId">
+			<parameter column="@_roleId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="roleRightAssignment">
+			<parameter column="@_roleId" property="Role.Id" />
+			<parameter column="@_rightId" property="Right.Id" />
+			<parameter column="@_applicationId" property="Application.Id" />
+			<parameter column="@_securableObjectTypeId" property="SecurableObjectType.Id" />
+		</parameterMap>
+		<parameterMap id="roleRightAssignment-insert" extends="roleRightAssignment">
+		</parameterMap>
+		<parameterMap id="roleRightAssignmentId">
+			<parameter column="@_id" property="#value#" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

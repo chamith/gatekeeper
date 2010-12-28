@@ -1,0 +1,6 @@
+﻿<h3>Delete Role</h3>
+<hr /><br />
+Are you sure that you want to delete the role <b>$role.Name</b>?<br />
+$Url.Link("Yes","%{controller='role', action='delete', querystring='roleId=$role.Id'}") |
+$Url.Link("No","%{controller='role', action='default', querystring='applicationId=$role.Application.Id'}")
+ <br>

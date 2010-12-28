@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.User" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="User" type="Gatekeeper.User, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="user-insert" parameterMap="user-insert" resultMap="user">
+      csp_User_Insert
+    </procedure>
+		<procedure id="user-update" parameterMap="user-update">
+      csp_User_Update
+    </procedure>
+		<procedure id="user-select" parameterMap="userId" resultMap="user">
+      csp_User_Select
+    </procedure>
+		<procedure id="user-delete" parameterMap="userId" resultMap="user">
+      csp_User_Delete
+    </procedure>
+		<procedure id="user-select-by-loginName" parameterMap="loginName" resultMap="user">
+      bsp_User_Select_by_LoginName
+    </procedure>
+		<procedure id="user-select-all" resultMap="user">
+      bsp_User_Select_All
+    </procedure>
+		<procedure id="user-select-by-applicationId-loginName" parameterMap="applicationId-loginName" resultMap="user">
+      bsp_User_Select_by_ApplicationId_LoginName
+    </procedure>
+	<procedure id="user-update-details" parameterMap="user-update-details">
+      bsp_User_Update_Details
+    </procedure>
+</statements>
+	<resultMaps>
+		<resultMap id="user" class="User">
+			<result column="Id" property="Id" />
+			<result column="LoginName" property="LoginName" />
+			<result column="FirstName" property="FirstName" />
+			<result column="LastName" property="LastName" />
+			<result column="PasswordSalt" property="PasswordSalt"/>
+			<result column="PasswordHash" property="PasswordHash"/>
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="user" class="User">
+			<parameter column="@_loginName" property="LoginName" />
+			<parameter column="@_firstName" property="FirstName" />
+			<parameter column="@_lastName" property="LastName" />
+			<parameter column="@_passwordSalt" property="PasswordSalt" />			
+			<parameter column="@_passwordHash" property="PasswordHash" />		
+		</parameterMap>
+		<parameterMap id="user-insert" class="User" extends="user">
+		</parameterMap>
+		<parameterMap id="user-update" class="User" extends="user">
+			<parameter column="@_id" property="Id" />
+		</parameterMap>
+		<parameterMap id="user-update-details" class="User">
+			<parameter column="@_id" property="Id" />
+			<parameter column="@_loginName" property="LoginName" />
+			<parameter column="@_firstName" property="FirstName" />
+			<parameter column="@_lastName" property="LastName" />
+		</parameterMap>
+		<parameterMap id="loginName">
+			<parameter column="@_loginName" property="#value#" />
+		</parameterMap>
+		<parameterMap id="userId">
+			<parameter column="@_id" property="#value#" />
+		</parameterMap>
+		<parameterMap id="applicationId-loginName">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_loginName" property="LoginName" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

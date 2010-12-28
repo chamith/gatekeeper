@@ -1,0 +1,16 @@
+﻿<h2>Users</h2>
+<table style="width:100%">
+#foreach($user in $users)
+<tr>
+<td>
+$user.FirstName $user.LastName <i> <b>($user.LoginName)</b></i>
+</td>
+ <td>
+$Url.Link("Edit", "%{controller='user', action='edit', querystring='userId=$user.Id'}") |
+$Url.Link("Delete", "%{controller='user', action='confirmDelete', querystring='userId=$user.Id'}")
+</td>
+</tr>
+#end
+</table>
+<br />
+$Url.Link("Add New User", "%{controller='user', action='add'}")

@@ -1,0 +1,5 @@
+﻿<h2>$right.Name</h2>
+$right.Description
+<br /><br /><hr /><br />
+$Url.Link("Edit", "%{controller='right', action='edit', querystring='rightId=$right.Id'}") | 
+$Url.Link("Rights", "%{controller='roleRightAssociation', action='displayRolesByRight', querystring='rightId=$right.Id'}")

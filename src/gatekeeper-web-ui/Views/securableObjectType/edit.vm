@@ -1,0 +1,38 @@
+﻿
+<h2>
+#if(!$securableObjectType || $securableObjectType.IsNew)
+	New Securable Object Type
+#else
+	Edit Securable Object Type: $securableObjectType.Name
+#end
+</h2>
+<br />
+
+$Form.FormTag("%{action='Save'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("securableObjectType.Name", "Name:")</td>
+            <td style="width: 100px">
+                $Form.TextField("securableObjectType.Name", "%{}")</td>
+        </tr>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("securableObjectType.Description", "Description:")</td>
+            <td style="width: 100px">
+                $Form.TextField("securableObjectType.Description", "%{}")</td>
+        </tr>
+        <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.HiddenField("securableObjectType.Id")
+                $Form.HiddenField("securableObjectType.Application.Id")
+                $Form.Submit("Save")
+                
+</td>
+        </tr>
+    </table>
+  $Form.EndFormTag()
+
+  

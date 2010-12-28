@@ -1,0 +1,19 @@
+﻿<h2>$applicationUser.User.LoginName</h2>
+<br />
+    <table>
+       <tr>
+            <td style="width: 150px">
+                Name: </td>
+            <td style="width: 100px">
+                $applicationUser.User.FullName</td>
+        </tr>
+       <tr>
+            <td style="width: 150px">
+                Application Role: </td>
+            <td style="width: 100px">
+                $applicationUser.Role.Name</td>
+        </tr>
+    </table>
+    <br /><hr /><br />
+$Url.Link("Edit", "%{controller='applicationUser', action='edit', querystring='applicationUserId=$applicationUser.Id'}")
+

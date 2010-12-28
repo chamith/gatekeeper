@@ -1,0 +1,24 @@
+﻿<h2>$securableObjectType.Name</h2>
+<br />
+    <table>
+       <tr>
+            <td style="width: 150px">
+                Name: </td>
+            <td style="width: 100px">
+                $securableObjectType.Name</td>
+        </tr>
+       <tr>
+            <td style="width: 150px">
+                Description: </td>
+            <td style="width: 100px">
+                $securableObjectType.Description</td>
+        </tr>
+    </table>
+    <table>
+    <tr>
+    <th>Roles</th><th>Rights</th>
+    </tr>
+    </table>
+    <br /><hr /><br />
+$Url.Link("Edit", "%{controller='securableObjectType', action='edit', querystring='securableObjectTypeId=$securableObjectType.Id'}")
+

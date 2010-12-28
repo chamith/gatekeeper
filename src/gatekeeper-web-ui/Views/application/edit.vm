@@ -1,0 +1,43 @@
+﻿<h2>New Application</h2>
+<br />
+$Form.FormTag("%{action='SaveEdit'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("application.Name", "Name:")</td>
+            <td style="width: 100px">
+                $Form.TextField("application.Name", "%{}")</td>
+        </tr>
+        <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("application.Description", "Description:")</td>
+            <td style="width: 100px">
+                $Form.TextField("application.Description", "%{}")</td>
+        </tr>
+       <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.Submit("Save")
+</td>
+        </tr>
+    </table>
+    
+    #if($NoName)
+     <p class="error">
+        &nbsp;$NoName
+     </p>
+     #end
+     #if($NoDesc)
+     <p class="error">
+        &nbsp;$NoDesc
+     </p>
+     #end
+     #if($Duplicate)
+     <p class="error">
+        &nbsp;$Duplicate
+     </p>
+     #end
+    $Form.HiddenField("application.Guid")
+  $Form.HiddenField("application.Id")
+   $Form.EndFormTag()

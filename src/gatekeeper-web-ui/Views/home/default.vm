@@ -1,0 +1,15 @@
+﻿<h2>Applications</h2>
+<br />
+<ul>
+#foreach($application in $applications)
+<li>$Url.Link($application.Name, "%{controller='application', action='display', querystring='applicationId=$application.Id'}")
+#if($application.Description && $application.Description != "")
+&nbsp;-&nbsp;
+$application.Description
+#end
+<br /></li>
+#end
+</ul><br /><br /><hr /><br />
+<h3>$Url.Link("Users", "%{controller='user', action='default'}")</h3>
+<br /><hr /><br />
+$Url.Link("Add New Application", "%{controller='application', action='add'}")

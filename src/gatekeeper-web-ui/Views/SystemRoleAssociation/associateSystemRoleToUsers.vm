@@ -1,0 +1,23 @@
+﻿<h2>Grant Users to $role.Name</h2>
+<br />
+$Form.FormTag("%{action='SaveAssociateSystemRoleToUsers'}")
+<table >
+#foreach($user in $users)
+<tr>
+<td >
+<input class="checkbox" type="checkbox" name="user.IsGranted" value="$user.Id" #if($user.IsGranted) checked #end/>
+</td>
+<td>
+$user.FirstName $user.LastName <i><b>($user.LoginName)</b></i>
+</td>
+</tr>
+#end
+<tr>
+<td colspan="2" align="center">
+$Form.Submit("Save")
+</td>
+</tr>
+</table>
+$Form.HiddenField("role.Id")
+$Form.EndFormTag()<br />
+##$Url.Link("Add New User", "%{controller='User', action='add', querystring='applicationId=$application.Id'}")

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.UserRightAssignment"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="UserRightAssignment" type="Gatekeeper.UserRightAssignment, gatekeeper"/>
+  </alias>
+
+  <statements>
+    <procedure id="userRightAssignment-select-by-applicationId-userId" parameterMap="applicationId-userId" resultMap="userRightAssignment">
+      bsp_UserRightAssignment_Select_by_ApplicationId_UserId
+    </procedure>
+  </statements>
+
+  <resultMaps>
+    <resultMap id="userRightAssignment" class="UserRightAssignment">
+      <result column="SecurableObjectId" property="SecurableObjectId"/>
+      <result column="RightName" property="Right.Name"/>
+    </resultMap>
+  </resultMaps>
+  
+  <parameterMaps>
+    <parameterMap id="applicationId-userId" class="Hashtable">
+      <parameter column="@_applicationId" property="ApplicationId"/>
+      <parameter column="@_userId" property="UserId"/>
+    </parameterMap>
+  </parameterMaps>
+  
+</sqlMap>

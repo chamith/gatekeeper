@@ -1,0 +1,119 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Gatekeeper.Core;
+
+namespace Gatekeeper
+{
+    /// <summary>
+    /// Summary of UserRoleAssignment,it represents a role assigned to a particular user.
+    /// </summary>
+    /// <remarks>
+    /// 	<list type="table">
+    /// 		<listheader>
+    /// 			<description>modified</description>
+    /// 			<description>by</description>
+    /// 			<description>description</description>
+    /// 		</listheader>
+    /// 		<item>
+    /// 			<description>9/22/2008</description>
+    /// 			<description>Chamith Siriwardena</description>
+    /// 			<description>initial code</description>
+    /// 		</item>
+    /// 	</list>
+    /// </remarks>
+    public class UserRoleAssignment:BaseEntity
+    {
+        /// <summary>
+        /// Gets or sets the user,to whom the role is assigned..
+        /// </summary>
+        /// <value>The user.</value>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/22/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public User User { get; set; }
+
+        /// <summary>
+        /// Gets or sets the role assigned to the user.
+        /// </summary>
+        /// <value>The role.</value>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/22/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public Role Role { get; set; }
+
+        /// <summary>
+        /// Gets or sets the securable object id for which the user gets the role assignment..
+        /// </summary>
+        /// <value>The securable object id.</value>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/22/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public long SecurableObjectId { get; set; }
+
+        public SecurableObjectType SecurableObjectType { get; set; }
+       
+        /// <summary>
+        /// Gets or sets the application in which the user gets the role assignment..
+        /// </summary>
+        /// <value>The application.</value>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/22/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public Application Application { get; set; }
+
+        public ISecurableObject SecurableObject { get; set; }
+    }
+}

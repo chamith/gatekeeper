@@ -1,0 +1,12 @@
+<table style="width: 100%;">
+    <tr>
+        <td>
+            $Url.Link('Home', "%{area='',controller='Home', action='Default'}")
+        </td>
+    </tr>
+    <tr>
+        <td>
+        $Url.Link("Applications","%{controller='application', action='default'}")         
+        </td>
+    </tr>
+</table>

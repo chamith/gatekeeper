@@ -1,0 +1,38 @@
+﻿<h2>
+#if($user.IsNew)
+	New User
+#else
+	Edit User: $user.LoginName
+#end
+</h2>
+<br />
+$Form.FormTag("%{action='Save'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("user.LoginName", "Login Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.LoginName", "%{}")</td>
+        </tr>
+        <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("user.FirstName", "First Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.FirstName", "%{}")</td>
+        </tr>
+          <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("user.LastName", "Last Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.LastName", "%{}")</td>
+        </tr>
+      <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.Submit("Save")
+</td>
+        </tr>
+    </table>
+$Form.HiddenField("user.Id")
+$Form.EndFormTag()

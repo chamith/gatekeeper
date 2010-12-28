@@ -1,0 +1,23 @@
+﻿<h2>Grant Rights to $role.Name</h2>
+<br />
+$Form.FormTag("%{action='SaveAssociateRightsToRole'}")
+<table >
+#foreach($right in $rights)
+<tr>
+<td >
+<input class="checkbox" type="checkbox" name="right.IsGranted" value="$right.Id" #if($right.IsGranted) checked #end/>
+</td>
+<td>
+$right.Name
+</td>
+</tr>
+#end
+<tr>
+<td colspan="2" align="right">
+$Form.Submit("Save")
+</td>
+</tr>
+</table>
+$Form.HiddenField("role.Id")
+$Form.EndFormTag()<br />
+$Url.Link("Add New Right", "%{controller='right', action='add', querystring='applicationId=$application.Id'}")

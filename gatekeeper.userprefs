@@ -1,0 +1,44 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Membership/Data/UserRoleAssignment.sqlmap" ctype="Workbench">
+    <Files>
+      <File FileName="src/Membership.Web.UI/Web.config" Line="54" Column="56" />
+      <File FileName="src/Membership.Web.UI/Global.asax" Line="1" Column="65" />
+      <File FileName="src/Membership.Web.UI/Global.asax.cs" Line="9" Column="8" />
+      <File FileName="src/Membership.Web.UI/index.htm" Line="1" Column="1" />
+      <File FileName="src/Membership.Web.UI/Messages.cs" Line="1" Column="1" />
+      <File FileName="src/Membership/Data/Application.sqlmap" Line="7" Column="76" />
+      <File FileName="src/Membership/Data/sqlmap.config" Line="16" Column="62" />
+      <File FileName="src/Membership/Data/ApplicationUser.sqlmap" Line="4" Column="82" />
+      <File FileName="src/Membership/Data/Right.sqlmap" Line="4" Column="62" />
+      <File FileName="src/Membership/Data/Role.sqlmap" Line="7" Column="62" />
+      <File FileName="src/Membership/Data/RoleRightAssignment.sqlmap" Line="4" Column="90" />
+      <File FileName="src/Membership/Data/SecurableObject.sqlmap" Line="4" Column="82" />
+      <File FileName="src/Membership/Data/SecurableObjectType.sqlmap" Line="7" Column="92" />
+      <File FileName="src/Membership/Data/User.sqlmap" Line="4" Column="60" />
+      <File FileName="src/Membership/Data/UserRightAssignment.sqlmap" Line="7" Column="92" />
+      <File FileName="src/Membership/Data/UserRoleAssignment.sqlmap" Line="80" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches ctype="PinnedWatchStore" />
+</Properties>

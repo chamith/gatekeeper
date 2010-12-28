@@ -1,0 +1,6 @@
+﻿<h3>Delete Right</h3>
+<hr /><br />
+Are you sure that you want to delete the right <b>$right.Name</b>?<br />
+$Url.Link("Yes","%{controller='right', action='delete', querystring='rightId=$right.Id'}") |
+$Url.Link("No","%{controller='right', action='default', querystring='applicationId=$right.Application.Id'}")
+ <br>

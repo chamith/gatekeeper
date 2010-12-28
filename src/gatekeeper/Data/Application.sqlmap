@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.Application"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="Application" type="Gatekeeper.Application, gatekeeper"/>
+  </alias>
+
+  <statements>
+    <procedure id="application-select" resultMap="application" parameterMap="applicationId" >
+      csp_Application_Select
+    </procedure>
+    <procedure id="application-insert" parameterMap="application-insert" resultMap="application">
+      csp_Application_Insert
+    </procedure>
+    <procedure id="application-update" parameterMap="application-update">
+      csp_Application_Update
+    </procedure>
+    <procedure id="application-delete" parameterMap="applicationId" >
+      csp_Application_Delete
+    </procedure>
+    <procedure id="application-select-by-guid" parameterMap="applicationGuid" resultMap="application">
+      bsp_Application_Select_by_Guid
+    </procedure>
+    <procedure id="application-select-all" resultMap="application">
+      bsp_Application_Select_All
+    </procedure>
+  </statements>
+
+  <resultMaps>
+    <resultMap id="application" class="Application">
+      <result column="Id" property="Id"/>
+      <result column="Name" property="Name"/>
+      <result column="Description" property="Description"/>
+      <result column="Guid" property="Guid"/>
+    </resultMap>
+  </resultMaps>
+  <parameterMaps>
+    <parameterMap id="application" class="Application">
+      <parameter column="@_name" property="Name"/>
+      <parameter column="@_description" property="Description"/>
+      <parameter column="@_guid" property="Guid"/>
+    </parameterMap>
+    <parameterMap id="application-insert" class="Application" extends="application">
+    </parameterMap>
+    <parameterMap id="application-update" class="Application" extends="application">
+      <parameter column="@_id" property="Id" direction="Input"/>
+    </parameterMap>
+    <parameterMap id="applicationGuid">
+      <parameter column="@_guid" property="#value#"/>
+    </parameterMap>
+    <parameterMap id="applicationId">
+      <parameter column="@_id" property="#value#"/>
+    </parameterMap>
+  </parameterMaps>
+</sqlMap>

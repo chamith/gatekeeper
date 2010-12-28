@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.ApplicationUser" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="ApplicationUser" type="Gatekeeper.ApplicationUser, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="applicationUser-select" parameterMap="applicationUserId" resultMap="applicationUser">
+      csp_ApplicationUser_Select
+    </procedure>
+		<procedure id="applicationUser-insert" parameterMap="applicationUser-insert" resultMap="applicationUser">
+      csp_ApplicationUser_Insert
+    </procedure>
+		<procedure id="applicationUser-update" parameterMap="applicationUser-update">
+      csp_ApplicationUser_Update
+    </procedure>
+		<procedure id="applicationUser-delete" parameterMap="applicationUserId">
+      csp_ApplicationUser_Delete
+    </procedure>
+		<procedure id="applicationUser-select-by-applicationId" parameterMap="applicationId" resultMap="applicationUser">
+      bsp_ApplicationUser_Select_by_ApplicationId
+    </procedure>
+		<procedure id="applicationUser-select-by-applicationId-userId" parameterMap="applicationId-userId" resultMap="applicationUser">
+      bsp_ApplicationUser_Select_by_ApplicationId_UserId
+    </procedure>
+		<procedure id="applicationUser-select-by-userId" parameterMap="userId" resultMap="applicationUser">
+      bsp_ApplicationUser_Select_by_UserId
+    </procedure>
+	</statements>
+	<resultMaps>
+		<resultMap id="applicationUser" class="ApplicationUser">
+			<result column="Id" property="Id" />
+			<result column="ApplicationId" property="Application.Id" />
+			<result column="UserId" property="User.Id" />
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="applicationUser" class="ApplicationUser">
+			<parameter column="@_applicationId" property="Application.Id" />
+			<parameter column="@_userId" property="User.Id" />
+		</parameterMap>
+		<parameterMap id="applicationId-userId" class="Hashtable">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_userId" property="UserId" />
+		</parameterMap>
+		<parameterMap id="applicationUser-insert" class="ApplicationUser" extends="applicationUser">
+		</parameterMap>
+		<parameterMap id="applicationUser-update" class="ApplicationUser" extends="applicationUser">
+			<parameter column="@_id" property="Id" />
+		</parameterMap>
+		<parameterMap id="applicationUserId" type="long">
+			<parameter column="@_id" property="#value#" />
+		</parameterMap>
+		<parameterMap id="applicationId" type="long">
+			<parameter column="@_applicationId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="userId" type="long">
+			<parameter column="@_userId" property="#value#" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

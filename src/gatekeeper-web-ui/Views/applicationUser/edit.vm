@@ -1,0 +1,34 @@
+﻿
+<h2>
+	New Application User
+</h2>
+<br />
+
+$Form.FormTag("%{action='Save'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("user.Id", "Application User:")</td>
+            <td style="width: 100px">
+                $Form.Select("applicationUser.User.Id", $users, "%{value='Id', text='FullName', firstoption='---------'}")</td>
+        </tr>
+               <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("role.Id", "Application Role:")</td>
+            <td style="width: 100px">
+                $Form.Select("applicationUser.Role.Id", $roles, "%{value='Id', text='Name', firstoption='---------'}")</td>
+        </tr>
+        <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.HiddenField("applicationUser.Application.Id")
+                $Form.HiddenField("applicationUser.Id")
+                $Form.Submit("Save")
+                
+</td>
+        </tr>
+    </table>
+  $Form.EndFormTag()
+
+  

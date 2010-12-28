@@ -1,0 +1,16 @@
+﻿<h2>Rights of $Role.Name</h2>
+<br />
+<table style="width:100%">
+  <tr align="left">
+  <th>Name</th>
+  </tr>
+#foreach($roleRightAssignment in $roleRightAssignments)
+<tr>
+<td>
+$roleRightAssignment.Right.Name
+</td>
+</tr>
+#end
+</table>
+<br />
+$Url.Link("Grant Rights", "%{action='associateRightsToRole', querystring='roleId=$role.Id'}")

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.UserRoleAssignment" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<alias>
+		<typeAlias alias="UserRoleAssignment" type="Gatekeeper.UserRoleAssignment, gatekeeper" />
+	</alias>
+	<statements>
+		<procedure id="userRoleAssignment-select-by-applicationId-userId" parameterMap="applicationId-userId" resultMap="userRoleAssignment">
+      bsp_UserRoleAssignment_Select_by_ApplicationId_UserId
+    </procedure>
+		<procedure id="userRoleAssignment-select-by-applicationId-roleId-securableObjectGuid" parameterMap="applicationId-roleId-securableObjectGuid" resultMap="userRoleAssignment">
+      bsp_UserRoleAssignment_Select_by_ApplicationId_RoleId_SecurableObjectGuid
+    </procedure>
+		<procedure id="userRoleAssignment-select-by-applicationId-userId-roleId-securableObjectId" parameterMap="applicationId-userId-roleId-securableObjectId" resultMap="userRoleAssignment">
+      bsp_UserRoleAssignment_Select_by_ApplicationId_UserId_RoleId_SecurableObjectId
+    </procedure>
+		<procedure id="userRoleAssignment-select-by-applicationId-userId-securableObjectId" parameterMap="applicationId-userId-securableObjectId" resultMap="userRoleAssignment">
+      bsp_UserRoleAss_Select_by_ApplicationId_UserId_SecurableObjectId
+    </procedure>
+		<procedure id="userRoleAssignment-insert" parameterMap="userRoleAssignment-insert" resultMap="userRoleAssignment">
+      csp_UserRoleAssignment_Insert
+    </procedure>
+		<procedure id="userRoleAssignment-delete" parameterMap="userRoleAssignment-delete">
+      csp_UserRoleAssignment_Delete
+    </procedure>
+		<procedure id="userRoleAssignment-update" parameterMap="userRoleAssignment-update">
+      csp_UserRoleAssignment_Update
+    </procedure>
+		<procedure id="userRoleAssignment-select-by-applicationId" parameterMap="applicationId" resultMap="userRoleAssignment">
+      bsp_UserRoleAssignment_Select_by_ApplicationId
+    </procedure>
+	</statements>
+	<resultMaps>
+		<resultMap id="userRoleAssignment" class="UserRoleAssignment">
+			<result column="Id" property="Id" />
+			<result column="UserId" property="User.Id" />
+			<result column="RoleId" property="Role.Id" />
+			<result column="SecurableObjectId" property="SecurableObjectId" />
+			<result column="ApplicationId" property="Application.Id" />
+		</resultMap>
+	</resultMaps>
+	<parameterMaps>
+		<parameterMap id="applicationId-userId" class="Hashtable">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_userId" property="UserId" />
+		</parameterMap>
+		<parameterMap id="userRoleAssignment" class="UserRoleAssignment">
+			<parameter column="@_userId" property="User.Id" />
+			<parameter column="@_roleId" property="Role.Id" />
+			<parameter column="@_securableObjectId" property="SecurableObjectId" />
+			<parameter column="@_applicationId" property="Application.Id" />
+		</parameterMap>
+		<parameterMap id="userRoleAssignment-insert" class="UserRoleAssignment" extends="userRoleAssignment">
+		</parameterMap>
+		<parameterMap id="userRoleAssignment-delete">
+			<parameter column="@_id" property="#value#" />
+		</parameterMap>
+		<parameterMap id="userRoleAssignment-update" class="UserRoleAssignment" extends="userRoleAssignment">
+			<parameter column="@_id" property="Id" />
+		</parameterMap>
+		<parameterMap id="applicationId-roleId-securableObjectGuid" class="Hashtable">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_roleId" property="RoleId" />
+			<parameter column="@_securableObjectGuid" property="SecurableObjectGuid" />
+		</parameterMap>
+		<parameterMap id="applicationId-userId-roleId-securableObjectId" class="Hashtable">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_userId" property="UserId" />
+			<parameter column="@_roleId" property="RoleId" />
+			<parameter column="@_securableObjectId" property="SecurableObjectId" />
+		</parameterMap>
+		<parameterMap id="applicationId-userId-securableObjectId" class="Hashtable">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_userId" property="UserId" />
+			<parameter column="@_securableObjectId" property="SecurableObjectId" />
+		</parameterMap>
+		<parameterMap id="applicationId">
+			<parameter column="@_applicationId" property="ApplicationId" />
+		</parameterMap>
+	</parameterMaps>
+</sqlMap>

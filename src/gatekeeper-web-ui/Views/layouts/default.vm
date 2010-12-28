@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="$siteroot/Content/css/global.css" />
+
+    <script src="$siteroot/Content/src/dropdown.js" type="text/javascript"></script>
+    <script type="text/javascript" src="$siteroot/Content/js/prototype.js"></script>
+    <script type="text/javascript" src="$siteroot/Content/js/scriptaculous.js"></script>
+    <script type="text/javascript" src="$siteroot/Content/js/behaviour.js"></script>
+    <script type="text/javascript" src="$siteroot/Content/js/formhelper.js"></script>
+
+    <title>Membership Management Console</title>
+</head>
+<body>
+    <div id="masthead">
+        <h1>
+            $Url.Link("Membership Management Console", "%{controller='home', action='default'}")</h1>
+    </div>
+    <ul id="breadCrumbs">
+       #component(Breadcrumb)
+    </ul>
+    <!-- Begin Main Column -->
+    <div id="mainContent">
+        #component(UserAdvisory) $childContent
+    </div>
+    <!-- Begin Side Column -->
+<!--    <div id="secondaryContent">
+    </div>
+-->    <!-- Begin Footer -->
+    <ul id="footer">
+        #component(footer)
+    </ul>
+    <div style="font-size: 0.8em; text-align: center; margin-top: 1.0em; margin-bottom: 1.0em;">
+        Design downloaded from <a href="http://www.freewebtemplates.com/">Free Templates</a>
+        - your source for free web templates
+    </div>
+</body>
+</html>

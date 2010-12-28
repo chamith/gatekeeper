@@ -1,0 +1,43 @@
+﻿<h2>New User</h2>
+<br />
+$Form.FormTag("%{action='Save'}")
+    <table>
+       <tr>
+            <td style="width: 150px">
+                $Form.LabelFor("user.LoginName", "Login Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.LoginName", "%{}")</td>
+        </tr>
+         <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("user.FirstName", "First Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.FirstName", "%{}")</td>
+        </tr>
+          <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("user.LastName", "Last Name:")</td>
+            <td style="width: 100px">
+              $Form.TextField("user.LastName", "%{}")</td>
+        </tr>
+          <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("password", "Password:")</td>
+            <td style="width: 100px">
+              $Form.TextField("password", "%{}")</td>
+        </tr>
+          <tr>
+            <td style="width: 150px">
+              $Form.LabelFor("passwdConf", "Confirm Password:")</td>
+            <td style="width: 100px">
+              $Form.TextField("passwdConf", "%{}")</td>
+        </tr>
+      <tr>
+            <td style="width: 150px">
+            </td>
+            <td style="width: 100px">
+                $Form.Submit("Add User")
+</td>
+        </tr>
+    </table>
+$Form.EndFormTag()

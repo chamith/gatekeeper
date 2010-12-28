@@ -1,0 +1,11 @@
+﻿<h2>$application.Name</h2> 
+#if($application.Description != "")
+<p>$application.Description</p>
+#end
+<p>{$application.Guid}</p>
+<br /><hr /><br />
+$Url.Link("Edit", "%{controller='application', action='edit', querystring='applicationId=$application.Id'}") | 
+$Url.Link("Securable Object Types", "%{controller='securableObjectType', action='default', querystring='applicationId=$application.Id'}") | 
+$Url.Link("Roles", "%{controller='role', action='default', querystring='applicationId=$application.Id'}") |
+$Url.Link("Rights", "%{controller='right', action='default', querystring='applicationId=$application.Id'}") |
+$Url.Link("Users", "%{controller='applicationUser', action='default', querystring='applicationId=$application.Id'}")

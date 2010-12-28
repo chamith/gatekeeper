@@ -1,0 +1,9 @@
+﻿<table>
+#foreach($application in $applications)
+<tr>
+<td>
+$Url.Link($application.Name, "%{controller='application', action='display', querystring='applicationId=$application.Id'}")
+</td>
+</tr>
+#end
+</table>

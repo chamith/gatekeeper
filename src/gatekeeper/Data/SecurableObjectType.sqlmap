@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Gatekeeper.Data.Mappers.SecurableObjectType"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="SecurableObjectType" type="Gatekeeper.SecurableObjectType, gatekeeper"/>
+  </alias>
+
+  <statements>
+    <procedure id="securableObjectType-select" parameterMap="securableObjectTypeId" resultMap="securableObjectType">
+      csp_SecurableObjectType_Select
+    </procedure>
+    <procedure id="securableObjectType-insert" parameterMap="securableObjectType-insert" resultMap="securableObjectType">
+      csp_SecurableObjectType_Insert
+    </procedure>
+    <procedure id="securableObjectType-update" parameterMap="securableObjectType-update">
+      csp_SecurableObjectType_Update
+    </procedure>
+    <procedure id="securableObjectType-delete" parameterMap="securableObjectTypeId">
+      csp_SecurableObjectType_Delete
+    </procedure>
+    <procedure id="securableObjectType-select-by-applicationId" parameterMap="applicationId" resultMap="securableObjectType">
+      bsp_SecurableObjectType_Select_by_ApplicationId
+    </procedure>
+    <procedure id="securableObjectType-select-by-name-applicationId" parameterMap="name-applicationId" resultMap="securableObjectType">
+      bsp_SecurableObjectType_Select_by_name_ApplicationId
+    </procedure>
+    <procedure id="securableObjectType-select-by-securableObjectId" parameterMap="securableObjectId" resultMap="securableObjectType">
+      bsp_SecurableObjectType_Select_by_SecurableObjectId
+    </procedure>
+  </statements>
+
+  <resultMaps>
+    <resultMap id="securableObjectType" class="SecurableObjectType">
+      <result column="Id" property="Id"/>
+      <result column="Name" property="Name"/>
+      <result column="Description" property="Description"/>
+      <result column="ApplicationId" property="Application.Id"/>
+    </resultMap>
+  </resultMaps>
+  
+  <parameterMaps>
+    <parameterMap id="securableObjectType">
+      <parameter column="@_name" property="Name"/>
+      <parameter column="@_description" property="Description"/>
+      <parameter column="@_applicationId" property="Application.Id"/>
+    </parameterMap>
+    <parameterMap id="securableObjectType-insert" extends="securableObjectType">
+    </parameterMap>
+    <parameterMap id="securableObjectType-update" extends="securableObjectType">
+      <parameter column="@_id" property="Id"/>
+    </parameterMap>
+    <parameterMap id="applicationId">
+      <parameter column="@_applicationId" property="#value#"/>
+    </parameterMap>
+    <parameterMap id="name-applicationId" class="Hashtable">
+      <parameter column="@_name" property="Name"/>
+      <parameter column="@_applicationId" property="ApplicationId"/>
+    </parameterMap>
+    <parameterMap id="securableObjectTypeId-applicationId" class="Hashtable">
+      <parameter column="@_id" property="Id"/>
+      <parameter column="@_applicationId" property="ApplicationId"/>
+    </parameterMap>
+    <parameterMap id="securableObjectId">
+      <parameter column="@_securableObjectId" property="#value#"/>
+    </parameterMap>
+    <parameterMap id="securableObjectTypeId">
+      <parameter column="@_id" property="#value#"/>
+    </parameterMap>
+  </parameterMaps>
+  
+</sqlMap>
