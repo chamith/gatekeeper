@@ -6,6 +6,7 @@ using membership = Gatekeeper;
 using Gatekeeper.Web.UI.Logging;
 using Gatekeeper.Web.UI.Models;
 using Gatekeeper.Collections;
+using Gatekeeper.Domain;
 
 namespace Gatekeeper.Web.UI.Controllers
 {
@@ -138,7 +139,7 @@ namespace Gatekeeper.Web.UI.Controllers
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
 
-            this.PropertyBag["application"] = new SecurableApplication();
+            this.PropertyBag["application"] = new Application();
 
             #region BreadcrumbTrail
             this.AddToBreadcrumbTrail(new Link() { Text = "Home", Controller = "home", Action = "default" });
@@ -171,13 +172,13 @@ namespace Gatekeeper.Web.UI.Controllers
         /// 		</list>
         /// 	</para>
         /// </remarks>
-        public void SaveAdd([DataBind("application")]SecurableApplication application)
+        public void SaveAdd([DataBind("application")]Application application)
         {
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
 
-			new AuthorizationSvc().AddSystemSecurableObject(application);
+			GatekeeperFactory.ApplicationSvc.Add(application);
 
 
             this.Redirect("home", "default");

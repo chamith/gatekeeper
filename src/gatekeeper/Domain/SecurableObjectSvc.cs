@@ -102,6 +102,39 @@ namespace Gatekeeper.Domain
         {
             this.securableObjectDao.Add(securableObject);
         }
+		
+		/// <summary>
+        /// Adds the specified securable object,inserts the ISecurableObject object.
+        /// </summary>
+        /// <param name="securableObject">The securable object.</param>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/25/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public void Add(ISecurableObject securableObject)
+        {
+			SecurableObject obj = new SecurableObject()
+			{
+				Application = securableObject.Application,
+				SecurableObjectType = securableObject.SecurableObjectType,
+				Guid = securableObject.SecurableObjectGuid
+			};
+			
+            this.securableObjectDao.Add(obj);
+        }
+		
         /// <summary>
         /// Deletes the specified securable object.
         /// </summary>

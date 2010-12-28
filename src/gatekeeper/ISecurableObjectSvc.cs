@@ -19,6 +19,7 @@ namespace Gatekeeper
         /// <param name="securableObject">The securable object.</param>
         void Add(SecurableObject securableObject);
 
+		void Add(ISecurableObject securableObject);
 		/// <summary>
         /// Deletes the specified securable object.
         /// </summary>

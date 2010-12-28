@@ -29,6 +29,14 @@ namespace Gatekeeper
 			set;
 		}
 		#endregion
+		
+		public void CopyFrom(Application application)
+		{
+			this.Id = application.Id;
+			this.Name = application.Name;
+			this.Description = application.Description;
+			this.Guid = application.Guid;
+		}
 	}
 }
 
