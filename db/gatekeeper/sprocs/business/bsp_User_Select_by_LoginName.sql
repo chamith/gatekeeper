@@ -4,7 +4,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS bsp_User_Select_by_LoginName$$
 CREATE PROCEDURE bsp_User_Select_by_LoginName
 (
-	_loginName bigint
+	_loginName varchar(50)
 )
 BEGIN
 	SELECT * 
