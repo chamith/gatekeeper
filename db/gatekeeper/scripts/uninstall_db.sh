@@ -30,7 +30,7 @@ echo done deleting tables.sql constraints.sql
 
 echo Creating the tables, constraints, sprocs in DB
 
-mysql -f -v -u root -p Membership < all_uninstall.sql
+mysql -f -v -u root -p gatekeeper < all_uninstall.sql
 
 echo deleting all_uninstall.sql
 
