@@ -8,6 +8,7 @@ namespace Gatekeeper
     /// </summary>
     public class ApplicationSecurityContext
     {
+		static log4net.ILog log = log4net.LogManager.GetLogger(typeof(ApplicationSecurityContext));
         /// <summary>
         /// Gets or sets the application.
         /// </summary>
@@ -79,6 +80,11 @@ namespace Gatekeeper
             
             //gets the collection of roles of specified application and assign that to property Roles. 
             this.Roles = GatekeeperFactory.RoleSvc.Get(this.Application);
+			#region logging
+			log.Debug("Loaded Application Roles:");
+			foreach(var role in this.Roles) log.Debug(role.Name);
+
+			#endregion
 
             //gets the collection of rights of specified application and assign that to property Rights. 
             this.Rights = GatekeeperFactory.RightSvc.Get(this.Application);

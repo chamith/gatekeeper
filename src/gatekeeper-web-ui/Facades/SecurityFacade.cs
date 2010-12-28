@@ -23,7 +23,7 @@ namespace Gatekeeper.Web.UI.Facades
     /// </remarks>
     public class SecurityFacade
     {
-        static Guid ApplicationGUID = new Guid("bb9431d0-9997-461a-8356-b92b876cb7cd");
+        static Guid ApplicationGUID = new Guid("8047b7b4-3a5c-47dd-aa73-88b04f09bfca");
 
         /// <summary>
         /// Gets the application security context.

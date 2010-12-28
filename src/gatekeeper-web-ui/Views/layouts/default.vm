@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -11,12 +11,11 @@
     <script type="text/javascript" src="$siteroot/Content/js/behaviour.js"></script>
     <script type="text/javascript" src="$siteroot/Content/js/formhelper.js"></script>
 
-    <title>Membership Management Console</title>
+    <title>gatekeeper</title>
 </head>
 <body>
     <div id="masthead">
-        <h1>
-            $Url.Link("Membership Management Console", "%{controller='home', action='default'}")</h1>
+       <h1>$Url.Link("gatekeeper", "%{controller='home', action='default'}")</h1>
     </div>
     <ul id="breadCrumbs">
        #component(Breadcrumb)

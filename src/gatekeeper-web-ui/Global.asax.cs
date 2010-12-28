@@ -57,8 +57,8 @@ namespace Gatekeeper.Web.UI
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
 
-//			if (this.Application["securityContext"] == null)
-//                this.Application["securityContext"] = new SecurityFacade().GetApplicationSecurityContext();
+			if (this.Application["securityContext"] == null)
+                this.Application["securityContext"] = new SecurityFacade().GetApplicationSecurityContext();
         
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodLeave);
