@@ -8,9 +8,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Gatekeeper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SoftCreations")]
 [assembly: AssemblyProduct("Gatekeeper")]
-[assembly: AssemblyCopyright("Copyright © SoftCreations 2007")]
+[assembly: AssemblyCopyright("Chamith Siriwardena - 2007")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
