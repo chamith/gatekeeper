@@ -60,6 +60,7 @@ namespace Gatekeeper
 
         public void AddObjectRight(ISecurableObject securableObject, string rightName)
         {
+			securableObject.SecurableObjectId = GatekeeperFactory.SecurableObjectSvc.Get(securableObject.SecurableObjectGuid).Id;
             this.ObjectRights.Add(new ObjectRight(securableObject, rightName));
         }
 

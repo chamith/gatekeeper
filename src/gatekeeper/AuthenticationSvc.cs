@@ -29,6 +29,9 @@ namespace Gatekeeper
 		{
 			User user = GatekeeperFactory.UserSvc.GetByLoginName(userName);
 			
+			if(user == null)
+				return false;
+			
 			string hash = CryptoHelper.CreatePasswordHash(password, user.PasswordSalt);
 			
 			return (hash == user.PasswordHash);

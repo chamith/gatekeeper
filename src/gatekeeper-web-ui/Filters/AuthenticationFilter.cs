@@ -33,6 +33,7 @@ namespace Gatekeeper.Web.UI.Filters
                 return true;
             }
 
+			context.Response.Redirect("session", "login");
             return false;
 		}
 		#endregion

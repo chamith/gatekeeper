@@ -6,6 +6,7 @@ using membership = Gatekeeper;
 using Gatekeeper.Web.UI.Logging;
 using Gatekeeper.Web.UI.Models;
 using Gatekeeper.Collections;
+using Gatekeeper.Web.UI.Filters;
 
 
 namespace Gatekeeper.Web.UI.Controllers
@@ -29,7 +30,8 @@ namespace Gatekeeper.Web.UI.Controllers
     /// 	</list>
     /// </remarks>
 
-    public class ApplicationUserController : BaseController
+ 	//[Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
+	public class ApplicationUserController : BaseController
     {
         #region Logger Initialization
         private static readonly ILog log = LogManager.GetLogger(typeof(ApplicationController));

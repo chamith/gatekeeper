@@ -90,7 +90,8 @@ namespace Gatekeeper.Web.UI
         protected void Session_Start(object sender, EventArgs e)
         {
 //            ApplicationSecurityContext applicationSecurityContext = HttpContext.Current.Application["securityContext"] as ApplicationSecurityContext;
-//            UserSecurityContext userSecurityContext = new UserSecurityContext(this.User.Identity.Name, applicationSecurityContext);
+//			log.Debug(this.User.Identity.Name);
+//            UserSecurityContext userSecurityContext = new UserSecurityContext("chamith", applicationSecurityContext);
 //            this.Context.Session["userSecurityContext"] = userSecurityContext;
 //            this.Context.Session["userSecurityPrincipal"] = new Principal(userSecurityContext);
 

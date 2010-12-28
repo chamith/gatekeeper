@@ -7,6 +7,7 @@ using Gatekeeper.Web.UI.Logging;
 using Gatekeeper.Web.UI.Models;
 using Gatekeeper.Collections;
 using Gatekeeper.Domain;
+using Gatekeeper.Web.UI.Filters;
 
 namespace Gatekeeper.Web.UI.Controllers
 {
@@ -29,7 +30,7 @@ namespace Gatekeeper.Web.UI.Controllers
     /// 		</list>
     /// 	</para>
     /// </remarks>
-
+	//[Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
     public class ApplicationController : BaseController
     {
         #region Logger Initialization
@@ -57,6 +58,8 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </remarks>
         public void Default()
         {
+
+			
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
@@ -97,7 +100,10 @@ namespace Gatekeeper.Web.UI.Controllers
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
 
-            //new Permission(this.Application, "View_System").Demand();
+           	SecurableApplication obj = new SecurableApplication();
+			obj.CopyFrom(this.Application);
+
+			new Permission(obj, "View_System").Demand();
 
             //Gets the application object of applicationId from database.
             Application application = GatekeeperFactory.ApplicationSvc.Get(applicationId);

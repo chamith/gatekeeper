@@ -1,0 +1,10 @@
+﻿#if ($loginAttempts>0) 
+	login failure...
+#end
+<form action="$url.for("%{action='login'}")" method="POST">
+$form.textfield("username")
+$form.passwordfield("password")
+$form.submit("submit")
+$form.hiddenfield("redirectUrl")
+$form.hiddenfield("loginAttempts")
+</form>

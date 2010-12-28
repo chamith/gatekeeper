@@ -22,7 +22,7 @@ namespace Gatekeeper.Web.UI.Controllers
     /// 		</item>
     /// 	</list>
     /// </remarks>
-    //[Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
+    [Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
     [Layout("default")]
 	public abstract class BaseController : SmartDispatcherController
     {
