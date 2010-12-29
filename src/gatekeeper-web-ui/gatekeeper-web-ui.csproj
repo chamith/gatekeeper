@@ -249,9 +249,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)$(TargetFileName) $(ProjectDir)..\..\..\Fullbin\ /f /i /e /r /y
-xcopy $(TargetDir)$(TargetName).pdb $(ProjectDir)..\..\..\Fullbin\ /f /i /e /r /y 
-</PostBuildEvent>
+    <PostBuildEvent></PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Views\components\breadcrumb\" />
