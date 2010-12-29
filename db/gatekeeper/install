@@ -1,0 +1,4 @@
+tmpfile=install_all.sql
+cat scripts/install/db/*.sql scripts/install/tables/*.sql sprocs/*/*.sql > $tmpfile
+mysql -u $1 -p -v -f < $tmpfile
+rm $tmpfile

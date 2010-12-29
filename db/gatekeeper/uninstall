@@ -1,0 +1,4 @@
+tmpfile=all_uninstall.sql
+cat scripts/uninstall/db/gatekeeper.sql > $tmpfile
+mysql -u $1 -p -v -f < $tmpfile
+rm $tmpfile
