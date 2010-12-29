@@ -100,10 +100,9 @@ namespace Gatekeeper.Web.UI.Controllers
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
 
-           	SecurableApplication obj = new SecurableApplication();
-			obj.CopyFrom(this.Application);
+           	SecurableApplication obj = new SecurableApplication(this.Application);
 
-			new Permission(obj, "View_System").Demand();
+			new Permission(obj, "view_system").Demand();
 
             //Gets the application object of applicationId from database.
             Application application = GatekeeperFactory.ApplicationSvc.Get(applicationId);

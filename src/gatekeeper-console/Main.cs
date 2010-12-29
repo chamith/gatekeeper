@@ -23,16 +23,16 @@ namespace Gatekeeper.ConsoleApp
 			bool exit = false;
 			switch(cmd.CommandString)
 			{
-			case "users":
-				commandBase = new UsersCommand();
-				break;
-			case "init":
-				commandBase = new InitCommand();
-				break;
-			case "exit":
-				commandBase = new ExitCommand();
-				exit = true;
-				break;
+				case "users":
+					commandBase = new UsersCommand();
+					break;
+				case "init":
+					commandBase = new InitCommand();
+					break;
+				case "exit":
+					commandBase = new ExitCommand();
+					exit = true;
+					break;
 			}
 			
 			if(commandBase!=null) commandBase.Execute(cmd.Args);

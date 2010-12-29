@@ -8,6 +8,12 @@ namespace Gatekeeper
 			this.Application = this;
 		}
 		
+		public SecurableApplication(Application application)
+		{
+			this.Application = application;
+			this.CopyFrom(application);
+		}
+		
 		#region ISecurableObject implementation
 		public SecurableObjectType SecurableObjectType {
 			get;
