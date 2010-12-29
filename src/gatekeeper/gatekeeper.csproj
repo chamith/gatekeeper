@@ -15,7 +15,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <PublishUrl>http://localhost/SoftCreations.Membership/</PublishUrl>
+    <PublishUrl></PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -44,7 +44,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>..\..\devbuild\bin\membership-fx3.5\assemblies\ECollegeSL.Enterprise.Membership.XML</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <AssemblyName>gatekeeper</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -53,7 +53,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AssemblyName>ECollegeSL.Enterprise.Membership</AssemblyName>
+    <AssemblyName>gatekeeper</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <OutputPath>bin\Release</OutputPath>
   </PropertyGroup>
@@ -159,9 +159,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)$(TargetFileName) $(ProjectDir)..\..\Fullbin\ /f /i /e /r /y
-xcopy $(TargetDir)$(TargetName).pdb $(ProjectDir)..\..\Fullbin\ /f /i /e /r /y 
-</PostBuildEvent>
+    <PostBuildEvent></PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Core\" />

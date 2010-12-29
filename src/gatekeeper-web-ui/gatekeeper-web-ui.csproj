@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\devbuild\bin\membership-fx3.5\assemblies\ECollegeSL.Enterprise.Membership.Web.UI.XML</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <AssemblyName>gatekeeper-web-ui</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -34,7 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AssemblyName>ECollegeSL.Enterprise.Membership.Web.UI</AssemblyName>
+    <AssemblyName>gatekeeper-web-ui</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -248,7 +248,6 @@
     <None Include="Views\session\login.vm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(TargetDir)$(TargetFileName) $(ProjectDir)..\..\..\Fullbin\ /f /i /e /r /y
 xcopy $(TargetDir)$(TargetName).pdb $(ProjectDir)..\..\..\Fullbin\ /f /i /e /r /y 
