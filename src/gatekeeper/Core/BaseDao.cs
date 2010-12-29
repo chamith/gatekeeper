@@ -40,11 +40,7 @@ namespace Gatekeeper.Core
         public void Add(EntityType entity)
         {
            	EntityType tmp = this.DataMapper.QueryForObject<EntityType>(this._entityLowercase +"-insert", entity);
-			Console.WriteLine(log.IsDebugEnabled);
-			log.DebugFormat("Entity {0} inserted with Id {1}", this._entityLowercase, tmp.Id);
-			Console.WriteLine("Entity {0} inserted with Id {1}", this._entityLowercase, tmp.Id);
 			entity.Id = tmp.Id;
-
         }
 
         public void Delete(EntityType entity)

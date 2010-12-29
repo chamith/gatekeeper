@@ -7,14 +7,16 @@ namespace Gatekeeper.ConsoleApp
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Gatekeeper Management Console");
-
+			Console.WriteLine ("+---------------------------------------------+");
+			Console.WriteLine ("| gatesh - a command line tool for gatekeeper |");
+			Console.WriteLine ("+---------------------------------------------+");
+			
 			while(!ExecuteCommand());
 		}
 
 		static bool ExecuteCommand()
 		{
-			Console.Write("mmc> ");
+			Console.Write("gatesh> ");
 			string commandLine = Console.ReadLine();
 			Command cmd = CommandHelper.Parse(commandLine);
 			CommandBase commandBase = null;
@@ -24,7 +26,11 @@ namespace Gatekeeper.ConsoleApp
 			case "users":
 				commandBase = new UsersCommand();
 				break;
+			case "init":
+				commandBase = new InitCommand();
+				break;
 			case "exit":
+				commandBase = new ExitCommand();
 				exit = true;
 				break;
 			}
@@ -34,15 +40,7 @@ namespace Gatekeeper.ConsoleApp
 			return exit;
 		}
 		
-		static void Initialize()
-		{
-			string username = "admin";
-			string firstname = "Admin";
-			string lastname = "User";
-			string password = "1qaz2wsx@";
-			var user = new Gatekeeper.AuthenticationSvc().AddUser(username, password, firstname, lastname);
 
-		}
 	}
 }
 

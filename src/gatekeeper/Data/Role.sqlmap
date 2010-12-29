@@ -23,7 +23,10 @@
     <procedure id="role-select-by-applicationId" parameterMap="applicationId" resultMap="role">
       bsp_Role_Select_by_ApplicationId
     </procedure>
-  </statements>
+    <procedure id="role-select-by-applicationId-name" parameterMap="applicationId-name" resultMap="role">
+      bsp_Role_Select_by_ApplicationId_Name
+    </procedure>  
+    </statements>
 
   <resultMaps>
     <resultMap id="role" class="Role">
@@ -39,6 +42,10 @@
 
     <parameterMap id="applicationId">
       <parameter column="@_applicationId" property="#value#"/>
+     </parameterMap>
+    <parameterMap id="applicationId-name">
+      <parameter column="@_applicationId" property="ApplicationId"/>
+      <parameter column="@_name" property="Name"/>
      </parameterMap>
     <parameterMap id="roleId">
       <parameter column="@_id" property="#value#"/>

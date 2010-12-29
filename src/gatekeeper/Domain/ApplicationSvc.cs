@@ -90,7 +90,7 @@ namespace Gatekeeper.Domain
         /// <param name="application">The application.</param>
         public void Add(Application application)
         {
-			application.Guid = Guid.NewGuid();
+			if(application.Guid == Guid.Empty) application.Guid = Guid.NewGuid();
             //inserts the application into the system.
 			Console.WriteLine("Adding an Application with Guid:{0}", application.Guid);
             this.applicationDao.Add(application);
@@ -157,7 +157,7 @@ namespace Gatekeeper.Domain
             {
                     Id = 0,
                     Application = securableApplication,
-                    Name = "System",
+                    Name = "system",
 					Description = "System Securable Object Type"
             };
 
@@ -173,7 +173,7 @@ namespace Gatekeeper.Domain
             Role systemAdministerRole = new Role()
             {
                 Application = securableApplication,
-                Name = "Administrator",
+                Name = "admin",
                 Description = "Administers the System",
                 SecurableObjectType = systemObjectType
             };
@@ -182,7 +182,7 @@ namespace Gatekeeper.Domain
             Role systemUserRole = new Role()
             {
                 Application = securableApplication,
-                Name = "User",
+                Name = "user",
                 Description = "Uses the System",
                 SecurableObjectType = systemObjectType
             };
@@ -196,7 +196,7 @@ namespace Gatekeeper.Domain
             Right administerSystemRight = new Right()
             {
                 Application = securableApplication,
-                Name = "Administer_System",
+                Name = "administer_system",
                 Description = "Administers the System",
                 SecurableObjectType = systemObjectType
             };
@@ -205,7 +205,7 @@ namespace Gatekeeper.Domain
             Right viewSystemRight = new Right()
             {
                 Application = securableApplication,
-                Name = "View_System",
+                Name = "view_system",
                 Description = "Views the System",
                 SecurableObjectType = systemObjectType
             };

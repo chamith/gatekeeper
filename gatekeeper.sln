@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gatekeeper-console", "src\g
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gatekeeper-web-ui", "src\gatekeeper-web-ui\gatekeeper-web-ui.csproj", "{F7AF4F27-ACFD-49B9-82CB-4660DC2703DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{F9CE2F18-20F1-4BC2-8141-17E5BDA7DB0E}"
+	ProjectSection(SolutionItems) = preProject
+		config\app.config = config\app.config
+		config\providers.config = config\providers.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,8 @@ Global
 		{F7AF4F27-ACFD-49B9-82CB-4660DC2703DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7AF4F27-ACFD-49B9-82CB-4660DC2703DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7AF4F27-ACFD-49B9-82CB-4660DC2703DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = src\gatekeeper-web-ui\gatekeeper-web-ui.csproj

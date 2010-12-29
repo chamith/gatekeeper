@@ -20,6 +20,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp config/app.config ${TargetFile}.config" workingdir="${SolutionDir}" />
+        <Command type="AfterBuild" command="cp config/providers.config ${TargetDir}/" workingdir="${SolutionDir}" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -38,6 +44,8 @@
     <Compile Include="Commands\CommandBase.cs" />
     <Compile Include="Commands\UsersCommand.cs" />
     <Compile Include="CommandHelper.cs" />
+    <Compile Include="Commands\InitCommand.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />

@@ -20,7 +20,15 @@ namespace Gatekeeper
         /// <returns></returns>
         Role Get(long roleId);
 
-        /// <summary>
+		/// <summary>
+        /// Gets the role in a specified application by with a specified name.
+        /// </summary>
+        /// <param name="application">The application.</param>
+        /// <param name="name">The name of the role.</para>
+        /// <returns></returns>
+        Role Get(Application application, string name);
+        
+		/// <summary>
         /// Adds the specified role,inserts the object role into the system.
         /// </summary>
         /// <param name="role">The role.</param>
