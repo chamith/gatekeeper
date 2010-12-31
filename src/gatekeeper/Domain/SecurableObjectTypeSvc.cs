@@ -84,29 +84,18 @@ namespace Gatekeeper.Domain
         /// Gets the SecurableObjectType of a specified application and securableObjectTypeId.
         /// </summary>
         /// <param name="application">The application.</param>
-        /// <param name="securableObjectTypeId">The securable object type id.</param>
+        /// <param name="id">The securable object type id.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/26/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
-        public SecurableObjectType Get(long securableObjectTypeId)
+        public SecurableObjectType Get(long id)
         {
-            return this.securableObjectTypeDao.Get(securableObjectTypeId);
+            return this.securableObjectTypeDao.Get(id);
         }
 
+        public SecurableObjectType Get(Application application, string name)
+		{
+			return this.securableObjectTypeDao.Get(application, name);
+		}
+		
         /// <summary>
         /// Adds the specified securable object type,inserts SecurableObjectType object into the system .
         /// </summary>

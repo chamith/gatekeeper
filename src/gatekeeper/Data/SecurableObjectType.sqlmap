@@ -23,8 +23,8 @@
     <procedure id="securableObjectType-select-by-applicationId" parameterMap="applicationId" resultMap="securableObjectType">
       bsp_SecurableObjectType_Select_by_ApplicationId
     </procedure>
-    <procedure id="securableObjectType-select-by-name-applicationId" parameterMap="name-applicationId" resultMap="securableObjectType">
-      bsp_SecurableObjectType_Select_by_name_ApplicationId
+    <procedure id="securableObjectType-select-by-applicationId-name" parameterMap="applicationId-name" resultMap="securableObjectType">
+      bsp_SecurableObjectType_Select_by_ApplicationId_Name
     </procedure>
     <procedure id="securableObjectType-select-by-securableObjectId" parameterMap="securableObjectId" resultMap="securableObjectType">
       bsp_SecurableObjectType_Select_by_SecurableObjectId
@@ -54,7 +54,7 @@
     <parameterMap id="applicationId">
       <parameter column="@_applicationId" property="#value#"/>
     </parameterMap>
-    <parameterMap id="name-applicationId" class="Hashtable">
+    <parameterMap id="applicationId-name" class="Hashtable">
       <parameter column="@_name" property="Name"/>
       <parameter column="@_applicationId" property="ApplicationId"/>
     </parameterMap>

@@ -22,6 +22,8 @@ namespace Gatekeeper
         /// <param name="securableObjectTypeId">The securable object type id.</param>
         /// <returns></returns>
         SecurableObjectType Get(long securableObjectTypeId);
+		
+        SecurableObjectType Get(Application application, string name);
 
         /// <summary>
         /// Adds the specified securable object type,inserts SecurableObjectType object into the system .

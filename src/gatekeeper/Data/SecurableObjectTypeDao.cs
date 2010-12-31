@@ -54,38 +54,6 @@ namespace Gatekeeper.Data
         }
 
         /// <summary>
-        /// Gets the SecurableObjectType object of a specified application and for a particular securableObjectTypeId.
-        /// </summary>
-        /// <param name="application">The application.</param>
-        /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
-        internal SecurableObjectType Get(Application application, long securableObjectTypeId)
-        {
-            Hashtable args = new Hashtable();
-            args["applicationId"] = application.Id;
-            args["securableObjectTypeId"] = securableObjectTypeId;
-            
-            return this.DataMapper.QueryForObject<SecurableObjectType>(
-                    "securableObjectType-select", args);
-        }
-
-        /// <summary>
         /// Gets all the SecurableObjectType objects of a specified  application by passing applicationId,it returns collection of SecurableObjectTypes.
         /// </summary>
         /// <param name="application">The application.</param>
@@ -136,14 +104,13 @@ namespace Gatekeeper.Data
         /// 		</list>
         /// 	</para>
         /// </remarks>
-        internal SecurableObjectType GetByNameApplication(string name, Application application)
+        internal SecurableObjectType Get(Application application, string name)
         {
             Hashtable args = new Hashtable();
-            args["name"] = name;
-            args["applicationId"] = application.Id;
-
+            args["ApplicationId"] = application.Id;
+            args["Name"] = name;
             return this.DataMapper.QueryForObject<SecurableObjectType>(
-                    "securableObjectType-select-by-name-applicationId", args);
+                    "securableObjectType-select-by-applicationId-name", args);
         }
     }
 }
