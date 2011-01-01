@@ -29,6 +29,9 @@ namespace Gatekeeper.ConsoleApp
 				case "init":
 					commandBase = new InitCommand();
 					break;
+				case "import":
+					commandBase = new ImportCommand();
+					break;
 				case "exit":
 					commandBase = new ExitCommand();
 					exit = true;

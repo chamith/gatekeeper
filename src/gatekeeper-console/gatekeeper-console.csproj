@@ -46,6 +46,7 @@
     <Compile Include="CommandHelper.cs" />
     <Compile Include="Commands\InitCommand.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\ImportCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
@@ -55,6 +56,15 @@
       <Project>{66B146C6-A571-467B-B1E9-12A589211310}</Project>
       <Name>gatekeeper</Name>
     </ProjectReference>
+    <ProjectReference Include="..\gatekeeper-util\gatekeeper-util.csproj">
+      <Project>{5833C950-08D9-4984-9046-EA790B98C146}</Project>
+      <Name>gatekeeper-util</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="testapp.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

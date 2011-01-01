@@ -104,8 +104,34 @@ namespace Gatekeeper.Domain
         {
             return this.rightDao.Get(rightId);
         }
-
+		
         /// <summary>
+        /// Gets the right object of a specified right id.
+        /// </summary>
+        /// <param name="rightId">The right id.</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// 	<para>
+        /// 		<list type="table">
+        /// 			<listheader>
+        /// 				<description>modified</description>
+        /// 				<description>by</description>
+        /// 				<description>description</description>
+        /// 			</listheader>
+        /// 			<item>
+        /// 				<description>9/25/2008</description>
+        /// 				<description>Chamith Siriwardena</description>
+        /// 				<description>initial code</description>
+        /// 			</item>
+        /// 		</list>
+        /// 	</para>
+        /// </remarks>
+        public Right Get(Application application, string name)
+        {
+            return this.rightDao.Get(application, name);
+        }        
+		
+		/// <summary>
         /// Gets all the rights of a specified role,it returns collection of rights.
         /// </summary>
         /// <param name="role">The role.</param>

@@ -16,8 +16,11 @@
 		<procedure id="right-delete" parameterMap="rightId">
       csp_Right_Delete
     </procedure>
-		<procedure id="right-select-by-applicationId" parameterMap="applicationId" resultMap="right">
+	<procedure id="right-select-by-applicationId" parameterMap="applicationId" resultMap="right">
       bsp_Right_Select_by_ApplicationId
+    </procedure>
+	<procedure id="right-select-by-applicationId-name" parameterMap="applicationId-name" resultMap="right">
+      bsp_Right_Select_by_ApplicationId_Name
     </procedure>
 		<procedure id="right-select-by-securableObjectTypeId" parameterMap="securableObjectTypeId" resultMap="right">
       bsp_Right_Select_by_SecurableObjectTypeId
@@ -35,6 +38,10 @@
 	<parameterMaps>
 		<parameterMap id="applicationId">
 			<parameter column="@_applicationId" property="#value#" />
+		</parameterMap>
+		<parameterMap id="applicationId-name">
+			<parameter column="@_applicationId" property="ApplicationId" />
+			<parameter column="@_name" property="Name" />
 		</parameterMap>
 		<parameterMap id="securableObjectTypeId">
 			<parameter column="@_securableObjectTypeId" property="#value#" />

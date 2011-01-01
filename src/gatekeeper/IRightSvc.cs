@@ -19,7 +19,7 @@ namespace Gatekeeper
         /// <param name="rightId">The right id.</param>
         /// <returns></returns>
         Right Get(long rightId);
-		
+		Right Get(Application application, string name);
         /// <summary>
         /// Gets all the rights of a specified role,it returns collection of rights.
         /// </summary>

@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{F9CE2F
 		config\providers.config = config\providers.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gatekeeper-util", "src\gatekeeper-util\gatekeeper-util.csproj", "{5833C950-08D9-4984-9046-EA790B98C146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{03B6D6DB-67BE-42A0-9727-E72FEB08BCCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B6D6DB-67BE-42A0-9727-E72FEB08BCCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03B6D6DB-67BE-42A0-9727-E72FEB08BCCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5833C950-08D9-4984-9046-EA790B98C146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5833C950-08D9-4984-9046-EA790B98C146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5833C950-08D9-4984-9046-EA790B98C146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5833C950-08D9-4984-9046-EA790B98C146}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66B146C6-A571-467B-B1E9-12A589211310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{66B146C6-A571-467B-B1E9-12A589211310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66B146C6-A571-467B-B1E9-12A589211310}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +47,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = src\gatekeeper-web-ui\gatekeeper-web-ui.csproj
+		StartupItem = src\gatekeeper-console\gatekeeper-console.csproj
 	EndGlobalSection
 EndGlobal

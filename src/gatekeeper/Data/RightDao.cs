@@ -103,5 +103,13 @@ namespace Gatekeeper.Data
         {
             return new RightCollection(this.DataMapper.QueryForList<Right>("right-select-by-securableObjectTypeId", securableObjectType.Id));
         }
+		
+		internal Right Get(Application application, string name)
+		{
+			Hashtable args = new Hashtable();
+			args["ApplicationId"] = application.Id;
+			args["Name"] = name;
+			return this.DataMapper.QueryForObject<Right>("right-select-by-applicationId-name", args);
+		}
     }
 }
