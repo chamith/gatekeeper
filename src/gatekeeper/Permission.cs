@@ -45,6 +45,22 @@ namespace Gatekeeper
             this.AddObjectRight(securableObject, rightName);
         }
 
+		/// <summary>
+        /// Initializes a new instance of the Permission class with .
+        /// </summary>
+        /// <param name="securableObjectGuid">The securable object.</param>
+        /// <param name="rightName">Name of the right.</param>
+        public Permission(Guid securableObjectGuid, string rightName)
+        {
+			var secObj = GatekeeperFactory.SecurableObjectSvc.Get(securableObjectGuid);
+            this.AddObjectRight(secObj.Id, rightName);
+        }
+		
+		/// <summary>
+        /// Initializes a new instance of the Permission class with .
+        /// </summary>
+        /// <param name="securableObjectGuid">The securable object.</param>
+        /// <param name="rightName">Name of the right.</param>
         public Permission(ISecurableObject securableObject, string[] rightNames)
         {
             foreach (string rightName in rightNames)
