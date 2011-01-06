@@ -13,23 +13,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of RoleRightAssociationController class,it controls all actions related with RoleRightAssociation.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/30/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
-
     public class SystemRoleAssociationController : BaseController
     {
         #region Logger Initialization
@@ -40,22 +23,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the rights by role.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void DisplayUsersBySystemRole(int roleId)
         {
             #region Logging
@@ -95,27 +62,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Associates the users to role.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>1/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 			<item>
-        /// 				<description>09/01/2009</description>
-        /// 				<description>firazm</description>
-        /// 				<description>modification</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void AssociateSystemRoleToUsers(int roleId)
         {
             #region Logging
@@ -185,22 +131,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="role">The role.</param>
         /// <param name="rightIds">The right ids.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAssociateSystemRoleToUsers([DataBind("role")]Role role, [DataBind("user.IsGranted")]int[] userIds)
         {
             #region Logging

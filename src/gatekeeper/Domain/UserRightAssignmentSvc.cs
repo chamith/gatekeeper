@@ -11,22 +11,6 @@ namespace Gatekeeper.Domain
     /// <summary>
     /// Summary of RoleSvc class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/25/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     public class UserRightAssignmentSvc : BaseSvc, IUserRightAssignmentSvc
     {
 		UserRightAssignmentDao _dao;
@@ -42,22 +26,6 @@ namespace Gatekeeper.Domain
         /// <param name="application">The application.</param>
         /// <param name="user">The user.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public UserRightAssignmentCollection GetByApplicationUser(Application application, User user)
         {
             return this._dao.GetByApplicationUser(application, user);

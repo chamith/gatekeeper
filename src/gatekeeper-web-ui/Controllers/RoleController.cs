@@ -13,23 +13,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of RoleController,it controls the actions which are related with roles.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/30/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
-
     public class RoleController : BaseController
     {
         #region Logger Initialization
@@ -39,22 +22,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Handles the default action and display the default view of the project section.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Default(int applicationId)
         {
             #region Logging
@@ -96,22 +63,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Adds the specified application id.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(int applicationId)
         {
             #region Logging
@@ -148,22 +99,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the role object into system.
         /// </summary>
         /// <param name="role">The role.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAdd([DataBind("role")]Role role)
         {
             #region Logging
@@ -186,22 +121,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the specified role id.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Display(int roleId)
         {
             #region Logging
@@ -233,22 +152,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Confirms the delete,it displays the delete view of role.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void ConfirmDelete(int roleId)
         {
             #region Logging
@@ -282,22 +185,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Deletes the specified role from the system.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(int roleId)
         {
             #region Logging
@@ -325,22 +212,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Edits the specified role,displays the view of editing information on role object.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(int roleId)
         {
             #region Logging
@@ -410,22 +281,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the edit.
         /// </summary>
         /// <param name="role">The role.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveEdit([DataBind("role")]Role role)
         {
             #region Logging

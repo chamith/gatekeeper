@@ -12,21 +12,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of UserController class,it controls all the actions related with User.
     /// </summary>
-    /// <remarks>
-    /// 	<list type="table">
-    /// 		<listheader>
-    /// 			<description>modified</description>
-    /// 			<description>by</description>
-    /// 			<description>description</description>
-    /// 		</listheader>
-    /// 		<item>
-    /// 			<description>9/30/2008</description>
-    /// 			<description>Chamith Siriwardena</description>
-    /// 			<description>initial code</description>
-    /// 		</item>
-    /// 	</list>
-    /// </remarks>
-
     public class UserController : BaseController
     {
         #region Logger Initialization
@@ -36,20 +21,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Summary of UserController class,it controls all the actions related with User.
         /// </summary>
-        /// <remarks>
-        /// 	<list type="table">
-        /// 		<listheader>
-        /// 			<description>modified</description>
-        /// 			<description>by</description>
-        /// 			<description>description</description>
-        /// 		</listheader>
-        /// 		<item>
-        /// 			<description>9/30/2008</description>
-        /// 			<description>Chamith Siriwardena</description>
-        /// 			<description>initial code</description>
-        /// 		</item>
-        /// 	</list>
-        /// </remarks>
         public void Default()
         {
             #region Logging
@@ -72,22 +43,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Handles the default action and display the default view of the project section.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Default(int applicationId)
         {
             #region Logging
@@ -120,22 +75,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Adds user.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add()
         {
             #region Logging
@@ -158,22 +97,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the add.
         /// </summary>
         /// <param name="user">The user.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Save([DataBind("user")]User user, string password, string passwdConf)
         {
             #region Logging
@@ -192,22 +115,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the specified user object.
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Display(int userId)
         {
             #region Logging
@@ -229,20 +136,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Confirms the delete.
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <remarks>
-        /// 	<list type="table">
-        /// 		<listheader>
-        /// 			<description>modified</description>
-        /// 			<description>by</description>
-        /// 			<description>description</description>
-        /// 		</listheader>
-        /// 		<item>
-        /// 			<description>9/30/2008</description>
-        /// 			<description>Chamith Siriwardena</description>
-        /// 			<description>initial code</description>
-        /// 		</item>
-        /// 	</list>
-        /// </remarks>
         public void ConfirmDelete(int userId)
         {
             #region Logging
@@ -270,22 +163,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Deletes the specified user object.
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(int userId)
         {
             #region Logging
@@ -303,22 +180,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Edits the specified user object.
         /// </summary>
         /// <param name="userId">The user id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(int userId)
         {
             #region Logging
@@ -345,22 +206,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the edit action.
         /// </summary>
         /// <param name="user">The user.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Save([DataBind("user")]User user)
         {
             #region Logging

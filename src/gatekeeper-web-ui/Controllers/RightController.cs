@@ -12,21 +12,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of RightController class,it contains the actions of rights related to the projects.
     /// </summary>
-    /// <remarks>
-    /// 	<list type="table">
-    /// 		<listheader>
-    /// 			<description>modified</description>
-    /// 			<description>by</description>
-    /// 			<description>description</description>
-    /// 		</listheader>
-    /// 		<item>
-    /// 			<description>9/30/2008</description>
-    /// 			<description>Chamith Siriwardena</description>
-    /// 			<description>initial code</description>
-    /// 		</item>
-    /// 	</list>
-    /// </remarks>
-
     public class RightController : BaseController
     {
         #region Logger Initialization
@@ -37,22 +22,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Handles the default action and display the default view of the project section.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Default(int applicationId)
         {
             #region Logging
@@ -92,22 +61,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the by role.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void DisplayByRole(int roleId)
         {
             #region Logging
@@ -145,22 +98,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Associates with role.
         /// </summary>
         /// <param name="roleId">The role id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void AssociateWithRole(int roleId)
         {
             #region Logging
@@ -234,22 +171,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Saves the associate with role.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAssociateWithRole()
         {
             #region Logging
@@ -266,22 +187,6 @@ namespace Gatekeeper.Web.UI.Controllers
         ///Displays the project with a specified id.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(int applicationId)
         {
             #region Logging
@@ -315,22 +220,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the contents of right into the database.
         /// </summary>
         /// <param name="right">The right.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAdd([DataBind("right")]Right right)
         {
             #region Logging
@@ -349,26 +238,10 @@ namespace Gatekeeper.Web.UI.Controllers
             #endregion
         }
 
-       /// <summary>
+        /// <summary>
         /// Displays the delete view of the right.
         /// </summary>
         /// <param name="rightId">The right id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void ConfirmDelete(int rightId)
         {
             #region Logging
@@ -402,22 +275,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Deletes the specified right from the database.
         /// </summary>
         /// <param name="rightId">The right id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(int rightId)
         {
             #region Logging
@@ -445,22 +302,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Edits the specified right id.
         /// </summary>
         /// <param name="rightId">The right id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(int rightId)
         {
             #region Logging
@@ -495,22 +336,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the edit.
         /// </summary>
         /// <param name="right">The right.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveEdit([DataBind("right")]Right right)
         {
             #region Logging
@@ -533,22 +358,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the specified right id.
         /// </summary>
         /// <param name="rightId">The right id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Display(int rightId)
         {
             #region Logging
@@ -579,22 +388,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         [AjaxAction]
         public void DisplayBySecurableObjectType(int applicationId, int securableObjectTypeId)
         {

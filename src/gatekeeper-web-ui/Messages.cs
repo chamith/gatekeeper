@@ -4,22 +4,6 @@ namespace Gatekeeper.Web.UI.Logging
     /// <summary>
     /// Contains the log messages.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>5/17/2008</description>
-    /// 				<description>Chamith</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     public class Messages
     {
         /// <summary>

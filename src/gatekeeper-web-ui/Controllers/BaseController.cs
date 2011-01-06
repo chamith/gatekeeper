@@ -8,20 +8,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Implements the base controller.
     /// </summary>
-    /// <remarks>
-    /// 	<list type="table">
-    /// 		<listheader>
-    /// 			<description>modified</description>
-    /// 			<description>by</description>
-    /// 			<description>description</description>
-    /// 		</listheader>
-    /// 		<item>
-    /// 			<description>5/20/2008</description>
-    /// 			<description>Chamith</description>
-    /// 			<description>initial code</description>
-    /// 		</item>
-    /// 	</list>
-    /// </remarks>
     [Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
     [Layout("default")]
 	public abstract class BaseController : SmartDispatcherController
@@ -32,22 +18,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Gets the application.
         /// </summary>
         /// <value>The application.</value>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public Application Application
         {
             get
@@ -61,22 +31,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseController"/> class.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public BaseController()
         {
             this.InitializeBreadcrumbTrail();
@@ -86,22 +40,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Adds to breadcrumb trail.
         /// </summary>
         /// <param name="link">The link.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         protected void AddToBreadcrumbTrail(Link link)
         {
             this.breadcrumbTrail.Add(breadcrumbTrail.Count, link);
@@ -111,22 +49,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Gets the breadcrumb trail.
         /// </summary>
         /// <value>The breadcrumb trail.</value>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         protected BreadcrumbTrail BreadcrumbTrail
         {
             get
@@ -138,22 +60,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Initializes the breadcrumb trail.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         protected virtual void InitializeBreadcrumbTrail()
         {
             if(this.breadcrumbTrail == null)
@@ -165,22 +71,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// any logic before the view is sent to the client.
         /// </summary>
         /// <param name="view"></param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public override void PreSendView(object view)
         {
             base.PreSendView(view);
@@ -189,22 +79,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Renders the breadcrumb trail.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         protected void RenderBreadcrumbTrail()
         {
             this.PropertyBag["breadcrumbTrail"] = this.breadcrumbTrail;
@@ -214,22 +88,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Gets the image.
         /// </summary>
         /// <param name="id">The id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void GetImage(int id)
         {
             this.CancelLayout();

@@ -11,22 +11,6 @@ namespace Gatekeeper.Domain
     /// <summary>
     /// Summary of RoleSvc class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/25/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     public class UserRoleAssignmentSvc : BaseSvc, IUserRoleAssignmentSvc
     {
         UserRoleAssignmentDao userRoleAssignmentDao;
@@ -36,22 +20,6 @@ namespace Gatekeeper.Domain
         /// <summary>
         /// Initializes a new instance of the RoleSvc class by creating a object of RoleDao class.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public UserRoleAssignmentSvc()
         {
             this.userRoleAssignmentDao = new UserRoleAssignmentDao();
@@ -116,24 +84,6 @@ namespace Gatekeeper.Domain
         /// Adds the specified role,inserts the object role into the system.
         /// </summary>
         /// <param name="role">The role.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
-        ///
-     
 		public void Save(UserRoleAssignment userRoleAssignment)
 		{           
 			this.Save(userRoleAssignment.Application, userRoleAssignment.User, userRoleAssignment.Role, userRoleAssignment.SecurableObject);
@@ -148,22 +98,6 @@ namespace Gatekeeper.Domain
         ///// Adds the specified role,inserts the object role into the system.
         ///// </summary>
         ///// <param name="role">The role.</param>
-        ///// <remarks>
-        ///// 	<para>
-        ///// 		<list type="table">
-        ///// 			<listheader>
-        ///// 				<description>modified</description>
-        ///// 				<description>by</description>
-        ///// 				<description>description</description>
-        ///// 			</listheader>
-        ///// 			<item>
-        ///// 				<description>9/25/2008</description>
-        ///// 				<description>Chamith Siriwardena</description>
-        ///// 				<description>initial code</description>
-        ///// 			</item>
-        ///// 		</list>
-        ///// 	</para>
-        ///// </remarks>
         //public void Add(UserRoleAssignment userRoleAssignment)
         //{
         //    this.userRoleAssignmentDao.Insert(userRoleAssignment);
@@ -173,22 +107,6 @@ namespace Gatekeeper.Domain
         /// Adds the specified roles,adding the Role objects into the RoleCollection.
         /// </summary>
         /// <param name="roles">The roles.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(UserRoleAssignmentCollection userRoleAssignments)
         {
             foreach (UserRoleAssignment assignment in userRoleAssignments)
@@ -200,22 +118,6 @@ namespace Gatekeeper.Domain
         ///// Updates the specified role.
         ///// </summary>
         ///// <param name="role">The role.</param>
-        ///// <remarks>
-        ///// 	<para>
-        ///// 		<list type="table">
-        ///// 			<listheader>
-        ///// 				<description>modified</description>
-        ///// 				<description>by</description>
-        ///// 				<description>description</description>
-        ///// 			</listheader>
-        ///// 			<item>
-        ///// 				<description>9/25/2008</description>
-        ///// 				<description>Chamith Siriwardena</description>
-        ///// 				<description>initial code</description>
-        ///// 			</item>
-        ///// 		</list>
-        ///// 	</para>
-        ///// </remarks>
         //public void Update(UserRoleAssignment userRoleAssignment)
         //{
         //    this.userRoleAssignmentDao.Update(userRoleAssignment);
@@ -224,22 +126,6 @@ namespace Gatekeeper.Domain
         /// Deletes the specified role.
         /// </summary>
         /// <param name="role">The role.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(Role role)
         {
             //this.userRoleAssignmentDao.Delete(role);

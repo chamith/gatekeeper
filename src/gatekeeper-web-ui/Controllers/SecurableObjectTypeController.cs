@@ -13,21 +13,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of SecurableObjectTypeController class,it controls all the actions related with SecurableObjectType.
     /// </summary>
-    /// <remarks>
-    /// 	<list type="table">
-    /// 		<listheader>
-    /// 			<description>modified</description>
-    /// 			<description>by</description>
-    /// 			<description>description</description>
-    /// 		</listheader>
-    /// 		<item>
-    /// 			<description>9/30/2008</description>
-    /// 			<description>Chamith Siriwardena</description>
-    /// 			<description>initial code</description>
-    /// 		</item>
-    /// 	</list>
-    /// </remarks>
-
     public class SecurableObjectTypeController : BaseController
     {
         #region Logger Initialization
@@ -38,22 +23,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Defaults view of the specified application id.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Default(int applicationId)
         {
             #region Logging
@@ -86,22 +55,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Display(long securableObjectTypeId)
         {
             #region Logging
@@ -133,22 +86,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Adds the specified application object into the system.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(int applicationId)
         {
             #region Logging
@@ -170,27 +107,12 @@ namespace Gatekeeper.Web.UI.Controllers
 			
 			this.PropertyBag["securableObjectType"] = new SecurableObjectType(){Application = application};
 			this.RenderView("edit");
-        } 
+        }
+		
 		/// <summary>
         /// Adds the specified application object into the system.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(int applicationId, int isError, int securableObjectTypeId, string securableObjectTypeName)
         {
             #region Logging
@@ -237,22 +159,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the SecurableObjectType objects into the system.
         /// </summary>
         /// <param name="securableObjectType">Type of the securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAdd([DataBind("securableObjectType")]SecurableObjectType securableObjectType,int ifIsIdErr)
         {
             #region Logging
@@ -352,22 +258,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void ConfirmDelete(int applicationId, int securableObjectTypeId)
         {
             #region Logging
@@ -403,22 +293,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(int applicationId, int securableObjectTypeId)
         {
             #region Logging
@@ -450,22 +324,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(long securableObjectTypeId)
         {
             #region Logging
@@ -502,22 +360,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <param name="securableObjectTypeId">The securable object type id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(int securableObjectTypeId, [DataBind("securableObjectType")]SecurableObjectType securableObjectType)
         {
             #region Logging
@@ -545,22 +387,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the edit.
         /// </summary>
         /// <param name="securableObjectType">Type of the securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Save([DataBind("securableObjectType")]SecurableObjectType securableObjectType)
         {
             #region Logging

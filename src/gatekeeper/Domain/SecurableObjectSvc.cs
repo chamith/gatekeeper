@@ -9,22 +9,6 @@ namespace Gatekeeper.Domain
     /// <summary>
     /// Summary of SecurableObjectSvc class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/25/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     public class SecurableObjectSvc:BaseSvc, ISecurableObjectSvc
     {
         SecurableObjectDao securableObjectDao;
@@ -32,22 +16,6 @@ namespace Gatekeeper.Domain
         /// <summary>
         /// Initializes a new instance of the SecurableObjectSvc class by creating a object of SecurableObjectDao Class .
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public SecurableObjectSvc()
         {
             this.securableObjectDao = new SecurableObjectDao();
@@ -56,22 +24,6 @@ namespace Gatekeeper.Domain
         /// Saves the specified securable object,inserts the ISecurableObject object into the system .
         /// </summary>
         /// <param name="securableObject">The securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Save(SecurableObject securableObject)
         {
             //securableObject.SecurableObjectGuid = this.GetNewSecurableObjectGuid();
@@ -82,22 +34,6 @@ namespace Gatekeeper.Domain
         /// Adds the specified securable object,inserts the ISecurableObject object.
         /// </summary>
         /// <param name="securableObject">The securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(SecurableObject securableObject)
         {
             this.securableObjectDao.Add(securableObject);
@@ -107,22 +43,6 @@ namespace Gatekeeper.Domain
         /// Adds the specified securable object,inserts the ISecurableObject object.
         /// </summary>
         /// <param name="securableObject">The securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add(ISecurableObject securableObject)
         {
 			SecurableObject obj = new SecurableObject()
@@ -139,22 +59,6 @@ namespace Gatekeeper.Domain
         /// Deletes the specified securable object.
         /// </summary>
         /// <param name="securableObject">The securable object.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(SecurableObject securableObject)
         {
             this.securableObjectDao.Delete(securableObject);
@@ -163,22 +67,6 @@ namespace Gatekeeper.Domain
         /// Gets the new securable object GUID.
         /// </summary>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public Guid GetNewSecurableObjectGuid()
         {
             return Guid.NewGuid();
