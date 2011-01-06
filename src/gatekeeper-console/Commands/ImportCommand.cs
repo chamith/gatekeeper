@@ -11,7 +11,7 @@ namespace Gatekeeper.ConsoleApp.Commands
 		public override void Execute (string[] args)
 		{
 			XMLImporter importer = new XMLImporter();
-			
+			importer.Import(args[0]);
 		}
 	}
 }

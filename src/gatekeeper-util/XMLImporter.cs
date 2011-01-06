@@ -6,8 +6,12 @@ namespace Gatekeeper.Util
 	{
 		public XMLImporter ()
 		{
+		}
+		
+		public void Import(string fileName)
+		{
 			XmlDocument doc = new XmlDocument();
-			doc.Load("./testapp.xml");
+			doc.Load(fileName);
 			var appNode = doc.SelectSingleNode("application");
 			var appName = appNode.Attributes["name"].Value;
 			var appDesc = appNode.Attributes["description"].Value;

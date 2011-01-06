@@ -1,4 +1,4 @@
-<application name="iplaydeal-developer-webapp" description="iPlayDeal Developer Web Application">
+<application name="iplaydeal-webapp" description="iPlayDeal Web Application">
 	<securableObjectTypes>
 		<securableObjectType name="system" description="System" />
 		<securableObjectType name="application" description="iPlayDeal Application" />
@@ -33,7 +33,10 @@
 		<right name="edit_application" description="edit_application" securableObjectType="application" />
 	</rights>
 	<applicationUsers>
-		<user-ref name="chamith@gmail.com" applicationRole="system_admin"/>
+		<user-ref name="chamith@iplaydeal.net" applicationRole="system_admin"/>
 		<user-ref name="saman@iplaydeal.net" applicationRole="application_developer"/>
+		<user-ref name="shabith@iplaydeal.net" applicationRole="application_developer"/>
+		<user-ref name="kanchana@iplaydeal.net" applicationRole="application_developer"/>
+		<user-ref name="damitha@iplaydeal.net" applicationRole="system_admin"/>
 	</applicationUsers>
 </application>
