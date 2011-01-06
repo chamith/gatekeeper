@@ -37,22 +37,6 @@ namespace Gatekeeper.Domain
         /// </summary>
         /// <param name="applicationId">The application id.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public Application Get(long applicationId)
         {
             return this.applicationDao.Get(applicationId);
@@ -62,22 +46,6 @@ namespace Gatekeeper.Domain
         /// Gets all the Application object from the system,it returns a list of Application object
         /// </summary>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public IList<Application> Get()
         {
             return this.applicationDao.Get();
@@ -101,22 +69,6 @@ namespace Gatekeeper.Domain
         /// Updates the specified application.
         /// </summary>
         /// <param name="application">The application.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Update(Application application)
         {
             this.applicationDao.Update(application);
@@ -126,22 +78,6 @@ namespace Gatekeeper.Domain
         /// Deletes the specified application.
         /// </summary>
         /// <param name="application">The application.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(Application application)
         {
             this.applicationDao.Delete(application);

@@ -8,22 +8,6 @@ namespace Gatekeeper.Data
     /// <summary>
     /// Summary of RoleDao class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/24/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     internal class RoleDao : BaseDao<Role>
     {
 		public RoleDao():base(SqlMapper.Instance){}
@@ -33,22 +17,6 @@ namespace Gatekeeper.Data
         /// </summary>
         /// <param name="application">The application.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/24/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal RoleCollection Get(Application application)
         {
             return new RoleCollection(
@@ -62,22 +30,6 @@ namespace Gatekeeper.Data
         /// <param name="application">The application.</param>
         /// <param name="name">The name of the role.</para>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/24/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal Role Get(Application application, string name)
         {
 			Hashtable args = new Hashtable();

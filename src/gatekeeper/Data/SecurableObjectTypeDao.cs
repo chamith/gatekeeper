@@ -7,22 +7,6 @@ namespace Gatekeeper.Data
     /// <summary>
     /// Summary of SecurableObjectTypeDao class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/25/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     internal class SecurableObjectTypeDao : BaseDao<SecurableObjectType>
     {
 		internal SecurableObjectTypeDao():base(SqlMapper.Instance){}
@@ -31,22 +15,6 @@ namespace Gatekeeper.Data
         /// </summary>
         /// <param name="securableObjectId">The securable object id.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal SecurableObjectType GetBySecurableObjectId(long securableObjectId)
         {
             return this.DataMapper.QueryForObject<SecurableObjectType>(
@@ -58,22 +26,6 @@ namespace Gatekeeper.Data
         /// </summary>
         /// <param name="application">The application.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal SecurableObjectTypeCollection Get(Application application)
         {
             return new SecurableObjectTypeCollection(
@@ -88,22 +40,6 @@ namespace Gatekeeper.Data
         /// <param name="name">The name.</param>
         /// <param name="application">The application.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal SecurableObjectType Get(Application application, string name)
         {
             Hashtable args = new Hashtable();

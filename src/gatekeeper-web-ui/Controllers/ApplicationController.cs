@@ -14,22 +14,6 @@ namespace Gatekeeper.Web.UI.Controllers
     /// <summary>
     /// Summary of ApplicationController,contains the actions related to the projects.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/30/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
 	//[Filter(ExecuteWhen.BeforeAction, typeof(AuthenticationFilter))]
     public class ApplicationController : BaseController
     {
@@ -40,22 +24,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Handles the default action and display the default view of the project section.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Default()
         {
 
@@ -78,22 +46,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the project with a specified application id.
         /// </summary>
         /// <param name="applicationId">The application id,identifier of a application.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Display(int applicationId)
         {
             #region Logging
@@ -122,22 +74,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// <summary>
         /// Creating a property bag variable and assign application object to that variable.
         /// </summary>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Add()
         {
             #region Logging
@@ -161,22 +97,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Displays the application save view,gets the application name and description of a application object from user and save those into database.
         /// </summary>
         /// <param name="application">The application.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveAdd([DataBind("application")]Application application)
         {
             #region Logging
@@ -199,22 +119,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Edits the specified application id.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Edit(int applicationId, string applicationName, string applicationDescription)
         {
             #region Logging
@@ -268,22 +172,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Saves the edit of a specified application object..
         /// </summary>
         /// <param name="application">The application.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void SaveEdit([DataBind("application")]Application application)
         {
             #region Logging
@@ -361,22 +249,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Confirms the delete of a specified application..
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void ConfirmDelete(int applicationId)
         {
             #region Logging
@@ -407,22 +279,6 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Deletes the application object of a specified application id.
         /// </summary>
         /// <param name="applicationId">The application id.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/30/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public void Delete(int applicationId)
         {
             #region Logging

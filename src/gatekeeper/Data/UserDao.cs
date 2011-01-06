@@ -9,22 +9,6 @@ namespace Gatekeeper.Data
     /// <summary>
     /// Summary of UserDao class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/25/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     internal class UserDao : BaseDao<User>
     {
 		internal UserDao():base(SqlMapper.Instance){}
@@ -38,22 +22,6 @@ namespace Gatekeeper.Data
         /// </summary>
         /// <param name="userLoginName">Name of the user login.</param>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal User GetByLoginName(string userLoginName)
         {
             return this.DataMapper.QueryForObject<User>("user-select-by-loginName", userLoginName);
@@ -63,22 +31,6 @@ namespace Gatekeeper.Data
         /// Gets all the users,it returns the collection of user.
         /// </summary>
         /// <returns></returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/25/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         internal UserCollection Get()
         {
             UserCollection users = new UserCollection();
