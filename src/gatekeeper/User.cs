@@ -9,22 +9,6 @@ namespace Gatekeeper
     /// <summary>
     /// Summary of User,represents a user of an application.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/19/2008</description>
-    /// 				<description>Chamith</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     public class User : BaseEntity, IIdentity
     {
 
@@ -32,44 +16,12 @@ namespace Gatekeeper
         /// Gets or sets the name of the login.
         /// </summary>
         /// <value>The name of the login.</value>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public string LoginName { get; set; }
 
         /// <summary>
         /// Gets or sets the first name.
         /// </summary>
         /// <value>The first name of the User.</value>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public string FirstName { get; set; }
 
 
@@ -77,22 +29,6 @@ namespace Gatekeeper
         /// Gets or sets the last name.
         /// </summary>
         /// <value>The last name of the User.</value>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public string LastName { get; set; }
 
         #region IIdentity Members
@@ -102,22 +38,6 @@ namespace Gatekeeper
         /// </summary>
         /// <value></value>
         /// <returns>The type of authentication used to identify the user.</returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public string AuthenticationType
         {
             get { return "custom"; }
@@ -128,22 +48,6 @@ namespace Gatekeeper
         /// </summary>
         /// <value></value>
         /// <returns>true if the user was authenticated; otherwise, false.</returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public bool IsAuthenticated
         {
             get { return this.Name.Equals(string.Empty); }
@@ -154,22 +58,6 @@ namespace Gatekeeper
         /// </summary>
         /// <value></value>
         /// <returns>The name of the user on whose behalf the code is running.</returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/19/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public string Name { get { return this.LoginName; } }
 
 		public string PasswordHash {

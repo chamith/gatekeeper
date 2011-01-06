@@ -8,22 +8,6 @@ namespace Gatekeeper
     /// <summary>
     /// Summary of Principal class.
     /// </summary>
-    /// <remarks>
-    /// 	<para>
-    /// 		<list type="table">
-    /// 			<listheader>
-    /// 				<description>modified</description>
-    /// 				<description>by</description>
-    /// 				<description>description</description>
-    /// 			</listheader>
-    /// 			<item>
-    /// 				<description>9/29/2008</description>
-    /// 				<description>Chamith Siriwardena</description>
-    /// 				<description>initial code</description>
-    /// 			</item>
-    /// 		</list>
-    /// 	</para>
-    /// </remarks>
     [Serializable]
     public class Principal : IPrincipal
     {
@@ -35,22 +19,6 @@ namespace Gatekeeper
         /// </summary>
         /// <param name="identity">The identity.</param>
         /// <param name="userRightAssignments">The user right assignments-array.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public Principal(IIdentity identity, UserRightAssignment[] userRightAssignments)
         {
             if (identity == null)
@@ -67,22 +35,6 @@ namespace Gatekeeper
         /// Initializes a new instance of the Principal class.
         /// </summary>
         /// <param name="userSecurityContext">The user security context.</param>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public Principal(UserSecurityContext userSecurityContext)
         {
             if (userSecurityContext == null)
@@ -102,22 +54,6 @@ namespace Gatekeeper
         /// <returns>
         /// true if the current principal is a member of the specified role; otherwise, false.
         /// </returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public virtual bool IsInRole(string role)
         {
             return false;
@@ -131,22 +67,6 @@ namespace Gatekeeper
         /// <returns>
         /// 	<c>true</c> if the specified securable object GUID has right; otherwise, <c>false</c>.
         /// </returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public virtual bool HasRight(long securableObjectId, string rightName)
         {
             if ((rightName != null) && (this.userRightAssignments != null))
@@ -170,22 +90,6 @@ namespace Gatekeeper
         /// <returns>
         /// 	<c>true</c> if the specified securable object has right; otherwise, <c>false</c>.
         /// </returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public virtual bool HasRight(ISecurableObject securableObject, string rightName)
         {
             return this.HasRight(securableObject.SecurableObjectId, rightName);
@@ -196,22 +100,6 @@ namespace Gatekeeper
         /// </summary>
         /// <value></value>
         /// <returns>The <see cref="T:System.Security.Principal.IIdentity"/> object associated with the current principal.</returns>
-        /// <remarks>
-        /// 	<para>
-        /// 		<list type="table">
-        /// 			<listheader>
-        /// 				<description>modified</description>
-        /// 				<description>by</description>
-        /// 				<description>description</description>
-        /// 			</listheader>
-        /// 			<item>
-        /// 				<description>9/29/2008</description>
-        /// 				<description>Chamith Siriwardena</description>
-        /// 				<description>initial code</description>
-        /// 			</item>
-        /// 		</list>
-        /// 	</para>
-        /// </remarks>
         public virtual IIdentity Identity
         {
             get
