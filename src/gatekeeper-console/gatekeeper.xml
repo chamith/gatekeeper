@@ -1,0 +1,20 @@
+<application name="gatekeeper-webapp" description="Gatekeeper Web Application">
+	<securableObjectTypes>
+		<securableObjectType name="system" description="System" />
+		<securableObjectType name="application" description="Application" />
+	</securableObjectTypes>
+	<roles>
+		<role name="system_admin" description="system_admin" securableObjectType="system">
+			<rightAssignments>
+				<right-ref name="view_system" />
+				<right-ref name="administer_system" />
+			</rightAssignments>
+		</role>
+	</roles>
+	<rights>
+		<right name="view_system" description="view_system" securableObjectType="system" />
+		<right name="administer_system" description="administer_system" securableObjectType="system" />
+	</rights>
+	<applicationUsers>
+	</applicationUsers>
+</application>

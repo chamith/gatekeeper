@@ -26,6 +26,9 @@ namespace Gatekeeper.ConsoleApp
 				case "users":
 					commandBase = new UsersCommand();
 					break;
+				case "adduser":
+					commandBase = new AddUserCommand();
+					break;
 				case "init":
 					commandBase = new InitCommand();
 					break;
