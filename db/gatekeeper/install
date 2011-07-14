@@ -1,5 +1,5 @@
 tmpfile=install_all.sql
 scriptdir=scripts/install
 cat $scriptdir/db/*.sql $scriptdir/tables/*.sql $scriptdir/constraints/*.sql $scriptdir/indexes/*.sql sprocs/*/*.sql > $tmpfile
-mysql -u $1 -p -v -f < $tmpfile
+mysql $* -v -f < $tmpfile
 rm $tmpfile

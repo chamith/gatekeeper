@@ -11,14 +11,24 @@ namespace Gatekeeper.ConsoleApp
 			Console.WriteLine ("| gatesh - a command line tool for gatekeeper |");
 			Console.WriteLine ("+---------------------------------------------+");
 			
-			while(!ExecuteCommand());
+			if(args.Length > 0)
+				ExecuteCommand(args);
+			else
+				while(!ExecuteCommand());
 		}
 
 		static bool ExecuteCommand()
 		{
 			Console.Write("gatesh> ");
 			string commandLine = Console.ReadLine();
-			Command cmd = CommandHelper.Parse(commandLine);
+			string[] args = CommandHelper.GetArgs(commandLine);
+			return ExecuteCommand(args);
+		}
+		
+		
+		static bool ExecuteCommand(string[] args)
+		{
+			Command cmd = CommandHelper.Parse(args);
 			CommandBase commandBase = null;
 			bool exit = false;
 			switch(cmd.CommandString)
@@ -44,9 +54,6 @@ namespace Gatekeeper.ConsoleApp
 			if(commandBase!=null) commandBase.Execute(cmd.Args);
 			
 			return exit;
-		}
-		
-
-	}
+		}}
 }
 

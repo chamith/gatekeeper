@@ -3,11 +3,14 @@ namespace Gatekeeper.ConsoleApp
 {
 	public class CommandHelper
 	{
-		public static Command Parse(string line)
+		public static string[] GetArgs(string line)
 		{
 			string[] testArgs = line.Split(' ');
-			
-			return Parse(testArgs);
+			return testArgs;
+		}
+		public static Command Parse(string line)
+		{	
+			return Parse(GetArgs(line));
 		}
 		
 		public static Command Parse(string[] args)
