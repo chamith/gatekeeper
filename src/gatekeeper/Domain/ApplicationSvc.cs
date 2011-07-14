@@ -109,24 +109,14 @@ namespace Gatekeeper.Domain
             Role systemAdministerRole = new Role()
             {
                 Application = securableApplication,
-                Name = "admin",
+                Name = "system_admin",
                 Description = "Administers the System",
-                SecurableObjectType = systemObjectType
-            };
-
-            // defining the system user role.
-            Role systemUserRole = new Role()
-            {
-                Application = securableApplication,
-                Name = "user",
-                Description = "Uses the System",
                 SecurableObjectType = systemObjectType
             };
 
             // adding the system administrator and the system user roles.
             IRoleSvc roleSvc = GatekeeperFactory.RoleSvc;
             roleSvc.Add(systemAdministerRole);//adding the systemAdministerRole as a role.
-            roleSvc.Add(systemUserRole);//adding the systemUserRole as a role.
 
             // defining the Administer_System right.
             Right administerSystemRight = new Right()
@@ -169,20 +159,9 @@ namespace Gatekeeper.Domain
                 SecurableObjectType = systemObjectType
             };
 			
-            // adding the role-right assignment (System User - View_System)
-			RoleRightAssignment user_view = new RoleRightAssignment()
-            {
-                Application = securableApplication,
-                Role = systemUserRole,
-                Right = viewSystemRight,
-                SecurableObjectType = systemObjectType
-            };
-
-
             IRoleRightAssignmentSvc rraSvc = GatekeeperFactory.RoleRightAssignmentSvc;
 			rraSvc.Add(admin_administer);
 			rraSvc.Add(admin_view);
-			rraSvc.Add(user_view);
 			
 			var adminUser = GatekeeperFactory.UserSvc.GetByLoginName("admin");
 			IApplicationUserSvc appUserSvc = GatekeeperFactory.ApplicationUserSvc;
