@@ -183,6 +183,10 @@ namespace Gatekeeper.Domain
 			rraSvc.Add(admin_administer);
 			rraSvc.Add(admin_view);
 			rraSvc.Add(user_view);
+			
+			var adminUser = GatekeeperFactory.UserSvc.GetByLoginName("admin");
+			IApplicationUserSvc appUserSvc = GatekeeperFactory.ApplicationUserSvc;
+			appUserSvc.Save(new ApplicationUser(){Application = securableApplication, User = adminUser, Role = systemAdministerRole});
 		}
     }
 }
