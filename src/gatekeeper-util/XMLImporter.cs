@@ -27,12 +27,15 @@ namespace Gatekeeper.Util
 		
 		void ImportSecurableObjectTypes(Application application, XmlNode xNodeApplication)
 		{
+			Console.WriteLine("Importing Securable Object Types");
+			
 			var list = xNodeApplication.SelectNodes("securableObjectTypes/securableObjectType");
 			
 			foreach(XmlNode node in list)
 			{
 				this.ImportSecurableObjectType(application, node);
 			}
+			
 			
 		}
 		
@@ -41,6 +44,8 @@ namespace Gatekeeper.Util
 			var name = node.Attributes["name"].Value;
 			var desc = node.Attributes["description"].Value;
 			
+			Console.WriteLine("Adding Securable Object Type '{0}'", name);
+			
 			SecurableObjectType item = new SecurableObjectType()
 			{
 				Application = application, 
@@ -48,12 +53,22 @@ namespace Gatekeeper.Util
 				Description = desc
 			};
 			
-			GatekeeperFactory.SecurableObjectTypeSvc.Add(item);
-			Console.WriteLine("Securable Object Type '{0}' added.", name);
+			try
+			{
+				GatekeeperFactory.SecurableObjectTypeSvc.Add(item);
+				Console.WriteLine("Completed adding Securable Object Type '{0}'", name);
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine("Error occurred while adding Securable Object Type '{0}'", name);
+				Console.WriteLine(ex.ToString());
+			}
 		}
 		
 		void ImportRoles(Application application, XmlNode xNodeApplication)
 		{
+			Console.WriteLine("Importing Roles");
+			
 			var list = xNodeApplication.SelectNodes("roles/role");
 			
 			foreach(XmlNode node in list)
@@ -66,8 +81,13 @@ namespace Gatekeeper.Util
 		void ImportRole(Application application, XmlNode node)
 		{
 			var name = node.Attributes["name"].Value;
-			var desc = node.Attributes["description"].Value;
 			var securableObjectTypeName = node.Attributes["securableObjectType"].Value;
+			
+			var desc = string.Empty;
+			var xAttrDescription = node.Attributes["description"];
+			if(xAttrDescription != null)
+				desc = xAttrDescription.Value;
+
 			var securableObjectType = GatekeeperFactory.SecurableObjectTypeSvc.Get(application, securableObjectTypeName);
 			
 			var item = new Role()
@@ -78,14 +98,26 @@ namespace Gatekeeper.Util
 				SecurableObjectType = securableObjectType
 			};
 			
-			GatekeeperFactory.RoleSvc.Add(item);
-			Console.WriteLine("Role '{0}' added.", name);
+			Console.WriteLine("Adding Role '{0}'", name);
+			
+			try
+			{
+				GatekeeperFactory.RoleSvc.Add(item);
+				Console.WriteLine("Completed adding Role '{0}'.", name);
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine("Error occurred while adding Role '{0}'.", name);
+				Console.WriteLine(ex.ToString());
+			}
 			
 			this.ImportRightAssignments(application, item, node);
 		}
 		
 		void ImportRightAssignments(Application application, Role role, XmlNode roleNode)
 		{
+			Console.WriteLine("Importing Role Right Assignments for the Role '{0}'.");
+			
 			var list = roleNode.SelectNodes("rightAssignments/right-ref");
 			
 			foreach(XmlNode node in list)
@@ -108,12 +140,24 @@ namespace Gatekeeper.Util
 				SecurableObjectType = role.SecurableObjectType
 			};
 			
-			GatekeeperFactory.RoleRightAssignmentSvc.Add(item);
-			Console.WriteLine("Role Right Assignment '{0} - {1}' added.", role.Name, rightName);
+			Console.WriteLine("Adding Role Right Assignment '{0} - {1}'.", role.Name, rightName);
+			
+			try
+			{
+				GatekeeperFactory.RoleRightAssignmentSvc.Add(item);
+				Console.WriteLine("Completed adding Role Right Assignment '{0} - {1}'.", role.Name, rightName);
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine("Error occurred while adding Role Right Assignment '{0} - {1}'.", role.Name, rightName);
+				Console.WriteLine(ex.ToString());
+			}
 		}
 		
 		void ImportRights(Application application, XmlNode xNodeApplication)
 		{
+			Console.WriteLine("Importing Rights.");
+			
 			var xNodeListRights = xNodeApplication.SelectNodes("rights/right");
 			
 			foreach(XmlNode node in xNodeListRights)
@@ -126,8 +170,13 @@ namespace Gatekeeper.Util
 		void ImportRight(Application application, XmlNode node)
 		{
 			var name = node.Attributes["name"].Value;
-			var desc = node.Attributes["description"].Value;
 			var securableObjectTypeName = node.Attributes["securableObjectType"].Value;
+			
+			var desc = string.Empty;
+			var xAttrDescription = node.Attributes["description"];
+			if(xAttrDescription != null)
+				desc = xAttrDescription.Value;
+
 			var securableObjectType = GatekeeperFactory.SecurableObjectTypeSvc.Get(application, securableObjectTypeName);
 			
 			Right right = new Right()
@@ -138,9 +187,17 @@ namespace Gatekeeper.Util
 				SecurableObjectType = securableObjectType
 			};
 			
-			GatekeeperFactory.RightSvc.Add(right);
-			Console.WriteLine("Right '{0}' added.", name);
-			
+			Console.WriteLine("Adding Right '{0}'.", name);
+			try
+			{
+				GatekeeperFactory.RightSvc.Add(right);
+				Console.WriteLine("Completed adding Right '{0}'.", name);
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine("Error occurred while adding Right '{0}'.", name);
+				Console.WriteLine(ex.ToString());
+			}
 		}
 
 		void ImportApplicationUsers(Application application, XmlNode xNodeApplication)

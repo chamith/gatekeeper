@@ -12,7 +12,9 @@ namespace Gatekeeper.ConsoleApp
 			Console.WriteLine ("+---------------------------------------------+");
 			
 			if(args.Length > 0)
+			{
 				ExecuteCommand(args);
+			}
 			else
 				while(!ExecuteCommand());
 		}

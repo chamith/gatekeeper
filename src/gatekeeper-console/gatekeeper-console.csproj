@@ -26,6 +26,7 @@
         <Command type="AfterBuild" command="cp config/providers.config ${TargetDir}/" workingdir="${SolutionDir}" />
       </CustomCommands>
     </CustomCommands>
+    <Commandlineparameters>import iplaydeal.gkconfig</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
