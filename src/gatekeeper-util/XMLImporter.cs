@@ -22,6 +22,7 @@ namespace Gatekeeper.Util
 			this.ImportSecurableObjectTypes(app, appNode);
 			this.ImportRights(app, appNode);
 			this.ImportRoles(app, appNode);
+			this.ImportApplicationUsers(app, appNode);
 		}
 		
 		void ImportSecurableObjectTypes(Application application, XmlNode xNodeApplication)
@@ -142,6 +143,47 @@ namespace Gatekeeper.Util
 			
 		}
 
+		void ImportApplicationUsers(Application application, XmlNode xNodeApplication)
+		{
+			var xNodeListApplicationUsers = xNodeApplication.SelectNodes("applicationUsers/user-ref");
+			
+			foreach(XmlNode node in xNodeListApplicationUsers)
+			{
+				this.ImportApplicationUser(application, node);
+			}
+		}
+		
+		void ImportApplicationUser(Application application, XmlNode node)
+		{
+			var userName = node.Attributes["name"].Value;
+			var roleName = node.Attributes["applicationRole"].Value;
+			
+			var user = GatekeeperFactory.UserSvc.GetByLoginName(userName);
+			var role = GatekeeperFactory.RoleSvc.Get(application, roleName);
+			
+			if(user == null)
+				Console.WriteLine("User '{0}' not found.", userName);
+		
+			if(role == null)
+				Console.WriteLine("Role '{0}' not found.", roleName);
+			
+			var appUser = new ApplicationUser(){Application = application, User = user, Role = role};
+			
+			if(user != null && role != null)
+			{
+				try
+				{
+					GatekeeperFactory.ApplicationUserSvc.Save(appUser);
+					
+					Console.WriteLine("User '{0}' has been added to the Role '{1}' in Application '{2}'.", userName, roleName, application.Name);
+				}
+				catch(Exception ex)
+				{
+					Console.WriteLine("Error occurred while adding User '{0}' to the Role '{1}' in Application '{2}'.", userName, roleName, application.Name);
+				}
+
+			}
+		}
 	}
 }
 

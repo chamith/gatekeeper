@@ -16,5 +16,6 @@
 		<right name="administer_system" description="administer_system" securableObjectType="system" />
 	</rights>
 	<applicationUsers>
+		<user-ref name="admin" applicationRole="system_admin"/>
 	</applicationUsers>
 </application>
