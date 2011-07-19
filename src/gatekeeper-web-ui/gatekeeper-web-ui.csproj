@@ -154,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="index.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaseController.cs" />
@@ -182,6 +181,7 @@
     <Compile Include="ViewComponents\UserAdvisoryComponent.cs" />
     <Compile Include="Controllers\ApplicationUserController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="RoutingRules.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\dropdown.css" />

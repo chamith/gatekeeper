@@ -3,6 +3,7 @@ using Gatekeeper.Web.UI.Facades;
 using System.Web;
 using log4net;
 using Gatekeeper.Web.UI.Logging;
+using Castle.MonoRail.Framework.Routing;
 
 namespace Gatekeeper.Web.UI
 {
@@ -24,6 +25,8 @@ namespace Gatekeeper.Web.UI
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
             #endregion
+
+			RoutingRules.Register(RoutingModuleEx.Engine);
 
 			if (this.Application["securityContext"] == null)
                 this.Application["securityContext"] = new SecurityFacade().GetApplicationSecurityContext();
@@ -56,6 +59,7 @@ namespace Gatekeeper.Web.UI
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
+			log.Debug(this.Request.Url.AbsoluteUri);
         }
 
         /// <summary>
