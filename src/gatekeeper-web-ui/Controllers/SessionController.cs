@@ -23,7 +23,7 @@ namespace Gatekeeper.Web.UI.Controllers
         /// Handles the default action and displays the default page.
         /// </summary>
         [SkipFilter(typeof(AuthenticationFilter))]
-        public void Login()
+        public void Login(string redirectUrl)
         {
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodEnter);
@@ -31,7 +31,11 @@ namespace Gatekeeper.Web.UI.Controllers
 
           
             this.RenderBreadcrumbTrail();
-            this.PropertyBag["redirectUrl"] = this.Request.UrlReferrer;
+			
+			if(string.IsNullOrEmpty(redirectUrl))
+				redirectUrl = "/";
+			
+            this.PropertyBag["redirectUrl"] = redirectUrl;
 
             #region Logging
             if (log.IsDebugEnabled) log.Debug(Messages.MethodLeave);
@@ -49,6 +53,9 @@ namespace Gatekeeper.Web.UI.Controllers
             	this.Context.Session["userSecurityContext"] = userSecurityContext;
             	this.Context.Session["userSecurityPrincipal"] = new Principal(userSecurityContext);
 			
+				if(string.IsNullOrEmpty(redirectUrl))
+					redirectUrl = "/";
+
 				this.RedirectToUrl(redirectUrl);
 			}
 			

@@ -1,4 +1,5 @@
 using Castle.MonoRail.Framework;
+using System.Collections;
 
 namespace Gatekeeper.Web.UI.Filters
 {
@@ -9,6 +10,7 @@ namespace Gatekeeper.Web.UI.Filters
 	{
 		
 		#region IFilter implementation
+		
 		public bool Perform (ExecuteWhen exec, IEngineContext context, IController controller, IControllerContext controllerContext)
 		{
 			if (context.Session.Contains("userSecurityPrincipal"))
@@ -17,10 +19,11 @@ namespace Gatekeeper.Web.UI.Filters
                 return true;
             }
 
-			context.Response.Redirect("session", "login");
+			context.Response.Redirect("session", "login", new Hashtable(){{"redirectUrl", context.Request.Url}});
             return false;
 		}
-		#endregion
 		
+		#endregion
+
     }
 }
