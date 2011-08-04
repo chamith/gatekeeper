@@ -41,9 +41,7 @@ namespace Gatekeeper.Util
 			foreach(XmlNode node in list)
 			{
 				this.ImportSecurableObjectType(application, node);
-			}
-			
-			
+			}			
 		}
 		
 		void ImportSecurableObjectType(Application application, XmlNode node)
