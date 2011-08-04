@@ -12,11 +12,18 @@ namespace Gatekeeper.Util
 		{
 			XmlDocument doc = new XmlDocument();
 			doc.Load(fileName);
+			Guid appGuid = Guid.Empty;
 			var appNode = doc.SelectSingleNode("application");
 			var appName = appNode.Attributes["name"].Value;
 			var appDesc = appNode.Attributes["description"].Value;
+			var attribAppGuid = appNode.Attributes["guid"];
 			
-			var app = new Application(){Guid = Guid.NewGuid(), Name = appName, Description = appDesc};
+			if(attribAppGuid == null)
+				appGuid = Guid.NewGuid();
+			else
+				appGuid = new Guid(attribAppGuid.Value);
+			
+			var app = new Application(){Guid = appGuid, Name = appName, Description = appDesc};
 			GatekeeperFactory.ApplicationSvc.Add(app);
 			
 			this.ImportSecurableObjectTypes(app, appNode);
