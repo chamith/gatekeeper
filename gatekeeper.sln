@@ -13,7 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{F9CE2F
 	ProjectSection(SolutionItems) = preProject
 		config\app.config = config\app.config
 		config\providers.config = config\providers.config
-		config\gatekeeper.xml = config\gatekeeper.xml
 		config\gatekeeper.config = config\gatekeeper.config
 	EndProjectSection
 EndProject
