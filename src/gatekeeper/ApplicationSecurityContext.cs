@@ -4,12 +4,13 @@ using Gatekeeper.Collections;
 namespace Gatekeeper
 {
     /// <summary>
-    /// Summary of ApplicationSecurityContext class,contains functionality for managing the permissions in an application.
+    /// Represents a context where the security information of an application is kept.
     /// </summary>
     public class ApplicationSecurityContext
     {
 		static log4net.ILog log = log4net.LogManager.GetLogger(typeof(ApplicationSecurityContext));
-        /// <summary>
+        
+		/// <summary>
         /// Gets or sets the application.
         /// </summary>
         /// <value>The application.</value>
@@ -40,7 +41,7 @@ namespace Gatekeeper
         public SecurableObjectTypeCollection SecurableObjectTypes { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the ApplicationSecurityContext class applicationGuid.
+        /// Initializes a new instance of the ApplicationSecurityContext class with applicationGuid.
         /// </summary>
         /// <param name="applicationGuid">The application GUID.</param>
         public ApplicationSecurityContext(Guid applicationGuid)
@@ -56,7 +57,7 @@ namespace Gatekeeper
         /// <summary>
         /// Initializes a new instance of the ApplicationSecurityContext class with applicationGuid.
         /// </summary>
-        /// <param name="applicationGuid">The application GUID.</param>
+        /// <param name="applicationGuid">The application GUID as a string</param>
         public ApplicationSecurityContext(string applicationGuid):this(new Guid(applicationGuid))
         {
         }
