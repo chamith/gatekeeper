@@ -120,7 +120,6 @@
     <Compile Include="IUserSvc.cs" />
     <Compile Include="Collections\ApplicationUserCollection.cs" />
     <Compile Include="ApplicationUser.cs" />
-    <Compile Include="MembershipFactory.cs" />
     <Compile Include="IUserRightAssignmentSvc.cs" />
     <Compile Include="Core\BaseEntity.cs" />
     <Compile Include="SecurableApplication.cs" />
@@ -150,6 +149,7 @@
     <Compile Include="Domain\UserRightAssignmentSvc.cs" />
     <Compile Include="Domain\UserRoleAssignmentSvc.cs" />
     <Compile Include="Domain\UserSvc.cs" />
+    <Compile Include="GatekeeperFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

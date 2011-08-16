@@ -15,7 +15,7 @@ namespace Gatekeeper
         #region Instance Members - Public Methods
 
         /// <summary>
-        /// Adds the specified user,inserts a user into the system.
+        /// Adds the specified user into the system.
         /// </summary>
         /// <param name="user">The user.</param>
         void Add(User user);
