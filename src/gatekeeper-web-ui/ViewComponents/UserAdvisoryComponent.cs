@@ -1,6 +1,6 @@
 using Castle.MonoRail.Framework;
 
-namespace BusinessLine.Web.UI.Reporting.ViewComponents
+namespace Gatekeeper.Web.UI.Reporting.ViewComponents
 {
     /// <summary>
     /// Composes the user advisory component.
