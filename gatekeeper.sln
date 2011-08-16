@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{F9CE2F
 		config\app.config = config\app.config
 		config\providers.config = config\providers.config
 		config\gatekeeper.xml = config\gatekeeper.xml
+		config\gatekeeper.config = config\gatekeeper.config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gatekeeper-util", "src\gatekeeper-util\gatekeeper-util.csproj", "{5833C950-08D9-4984-9046-EA790B98C146}"
